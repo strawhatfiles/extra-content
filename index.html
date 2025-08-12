@@ -44,16 +44,27 @@
     </button>
 
     <div class="tab-container">
+        <button class="tab active" onclick="showTab('homepage')">Homepage</button>
         <button class="tab" onclick="showTab('sbs')">SBS</button>
-        <button class="tab active" onclick="showTab('cover-stories')">Cover Stories</button>
+        <button class="tab" onclick="showTab('cover-stories')">Cover Stories</button>
         <button class="tab" onclick="showTab('specials-movies')">Specials & Movies</button>
         <button class="tab" onclick="showTab('filler')">Filler</button>
         <button class="tab" onclick="showTab('ops-eds')">OPs & EDs</button>
     </div>
 
     <div class="content">
+        <!-- Homepage Tab -->
+        <div id="homepage" class="tab-content active">
+
+        </div>
+
+        <!-- (Important) SBS Tab -->
+        <div id="sbs" class="tab-content">
+
+        </div>
+
         <!-- Cover Stories Tab -->
-        <div id="cover-stories" class="tab-content active">
+        <div id="cover-stories" class="tab-content">
             <div class="cover-stories-grid">
 
                 <div class="cover-story" data-number="No. 1">
