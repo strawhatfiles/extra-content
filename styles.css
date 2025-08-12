@@ -1326,3 +1326,21 @@ h1 {
 .legend-notice .separator {
     margin: 0 1rem;
 }
+
+@media (max-width: 1200px) {
+    .sunny-gallery {
+        grid-template-columns: repeat(5, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .sunny-gallery {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .sunny-gallery {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
