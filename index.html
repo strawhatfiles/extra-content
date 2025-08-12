@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Content Guide</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="Luffy.ico">
+    
+    <!-- General Meta Tags -->
+    <meta name="description" content="a comprehensive overview on all One Piece extra content">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="One Piece Cover Stories & Extra Content Guide">
+    <meta property="og:description" content="a comprehensive overview on all One Piece extra content">
+    <meta property="og:image" content="https://strawhatfiles.github.io/extra-content/icon.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="One Piece Extra Content Guide">
+    <meta name="twitter:description" content="a comprehensive overview on all One Piece extra content">
+    <meta name="twitter:image" content="https://strawhatfiles.github.io/extra-content/icon.jpg">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://drive.google.com">
+    <link rel="preconnect" href="https://www.youtube-nocookie.com">
+    <link rel="preconnect" href="https://www.netflix.com">
+
+    <!-- Version-Based Cache Busting -->
+    <link rel="stylesheet" href="styles.css?v=0.9">
+    <script>const SITE_VERSION = "0.9";</script>
+</head>
+<body>
+    <div class="header">
+        <h1>One Piece Extra Content Guide</h1>
+        <p class="subtitle">CONTAINS SPOILERS IF YOU ARE NOT CAUGHT UP WITH THE ANIME</p>
+    </div>
+
+    <button id="scrollToggle" class="btn btn-secondary scroll-btn" aria-label="Scroll">
+        <svg id="scrollIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <div class="tab-container">
+        <button class="tab" onclick="showTab('sbs')">SBS</button>
+        <button class="tab active" onclick="showTab('cover-stories')">Cover Stories</button>
+        <button class="tab" onclick="showTab('specials-movies')">Specials & Movies</button>
+        <button class="tab" onclick="showTab('filler')">Filler</button>
+        <button class="tab" onclick="showTab('ops-eds')">OPs & EDs</button>
+    </div>
+
+    <div class="content">
+        <!-- Cover Stories Tab -->
+        <div id="cover-stories" class="tab-content active">
+            <div class="load-all-container">
+                <button class="load-all-btn" onclick="loadAllPDFs()" id="loadAllBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    Load All PDFs
+                </button>
+            </div>
+            <div class="cover-stories-grid">
+
+                <div class="cover-story" data-number="No. 1">
+                    <div class="cover-story-content">
+                        <h3>Buggy's Crew Adventure Chronicles ✅</h3>
+                        <p class="chapters">ch35-75 (Syrup Village -> Arlong Park)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-1">
+                                <div class="load-button" onclick="loadPDF('placeholder-1', 'https://drive.google.com/file/d/1o1m-AOBmkYQnOCbGpgNqfuhypJw0LyFb/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Orange Town and Loguetown
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 2">
+                    <div class="cover-story-content">
+                        <h3>Diary of Koby-Meppo ✅</h3>
+                        <p class="chapters">ch83-119 (Arlong Park -> Little Garden)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-2">
+                                <div class="load-button" onclick="loadPDF('placeholder-2', 'https://drive.google.com/file/d/1ZMN2h90f8dtrsGeeJaFlMQ2ilexzjGNZ/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Romance Dawn and Post-Enies Lobby
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 3">
+                    <div class="cover-story-content">
+                        <h3>Jango's Dance Paradise</h3>
+                        <p class="chapters">ch126-172 (Little Garden -> Alabasta)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-3">
+                                <div class="load-button" onclick="loadPDF('placeholder-3', 'https://drive.google.com/file/d/1DGH137BYqBw8nk0Z7sSyo8o43ONz81Wf/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Baratie and Alabasta
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 4">
+                    <div class="cover-story-content">
+                        <h3>Hatchan's Sea-Floor Stroll</h3>
+                        <p class="chapters">ch182-228 (Alabasta -> Jaya)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-4">
+                                <div class="load-button" onclick="loadPDF('placeholder-4', 'https://drive.google.com/file/d/11NCJhE-fjhxVzkF76g8vK9cK9jElHMLU/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Arlong Park and Sabaody
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 5">
+                    <div class="cover-story-content">
+                        <h3>Wapol's Omnivorous Hurrah ❎</h3>
+                        <p class="chapters">ch236-262 (Jaya -> Skypiea)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-5">
+                                <div class="load-button" onclick="loadPDF('placeholder-5', 'https://drive.google.com/file/d/1jwst7A5x5-XdCp2uRMSV1Bzkcz3nyyZ5/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Drum Island and 3D2Y/timeskip
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 6">
+                    <div class="cover-story-content">
+                        <h3>Ace's Great Blackbeard Search</h3>
+                        <p class="chapters">ch272-305 (Skypiea -> Foxy)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-6">
+                                <div class="load-button" onclick="loadPDF('placeholder-6', 'https://drive.google.com/file/d/1RG7C-0-w66xkNGV-BBma9wKuDrTzuiKS/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Jaya and Post-Enies Lobby
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 7">
+                    <div class="cover-story-content">
+                        <h3>Gedatsu's Accidental Blue-Sea Life</h3>
+                        <p class="chapters">ch314-348 (Foxy -> Water 7)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-7">
+                                <div class="load-button" onclick="loadPDF('placeholder-7', 'https://drive.google.com/file/d/1srYxhyx1WsHqzaXHAFr041A4qgVaqKxn/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place after the events of Skypiea
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 8">
+                    <div class="cover-story-content">
+                        <h3>Miss Goldenweek's "Operation: Meet BW"</h3>
+                        <p class="chapters">ch359-413 (Water 7 -> Enies Lobby)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-8">
+                                <div class="load-button" onclick="loadPDF('placeholder-8', 'https://drive.google.com/file/d/1E_rMKM3q0fsiRZSzUuJVHyC1WSlKXEdr/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Alabasta and Impel Down
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story">
+                    <div class="cover-story-content">
+                        <h3>Where They Are Now #1 – Skypiea</h3>
+                        <p class="chapters">ch424-427 (Enies Lobby)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-13">
+                                <div class="load-button" onclick="loadPDF('placeholder-13', 'https://drive.google.com/file/d/19viS9LFusX5zEy9aQWb2VPpnx7WwO5f5/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place after the events of Skypiea
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 9">
+                    <div class="cover-story-content">
+                        <h3>Enel's Great Space Operations</h3>
+                        <p class="chapters">ch428-474 (Enies Lobby -> Thriller Bark)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-9">
+                                <div class="load-button" onclick="loadPDF('placeholder-9', 'https://drive.google.com/file/d/14SoE08itCyfZoR01u17wuy5ropLGx4r4/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place after the events of Skypiea
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story">
+                    <div class="cover-story-content">
+                        <h3>Where They Are Now #2 – Water 7</h3>
+                        <p class="chapters">ch486-490 (Thriller Bark)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-14">
+                                <div class="load-button" onclick="loadPDF('placeholder-14', 'https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place after the events of Enies Lobby
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 10">
+                    <div class="cover-story-content">
+                        <h3>CP9's Independent Report</h3>
+                        <p class="chapters">ch491-528 (Thriller Bark -> Impel Down)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-10">
+                                <div class="load-button" onclick="loadPDF('placeholder-10', 'https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Enies Lobby and Dressrosa
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 11-18">
+                    <div class="cover-story-content">
+                        <h3>Straw Hat's Separation Serial ✅</h3>
+                        <p class="chapters">ch543-560 (Impel Down -> Marineford)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-11">
+                                <div class="load-button" onclick="loadPDF('placeholder-11', 'https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Sabaody and Post-War
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 19">
+                    <div class="cover-story-content">
+                        <h3>From the Decks of the World</h3>
+                        <p class="chapters">ch613-668 (Fish-Man Island -> Punk Hazard)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-12">
+                                <div class="load-button" onclick="loadPDF('placeholder-12', 'https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Return to Sabaody and Dressrosa
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 20">
+                    <div class="cover-story-content">
+                        <h3>Caribou's Kehihihihi in the New World ❎</h3>
+                        <p class="chapters">ch674-731 (Punk Hazard -> Dressrosa)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-15">
+                                <div class="load-button" onclick="loadPDF('placeholder-15', 'https://drive.google.com')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Fish-Man Island and Wano
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 21">
+                    <div class="cover-story-content">
+                        <h3>Solo Journey of Jinbe, Knight of the Sea</h3>
+                        <p class="chapters">ch751-785 (Dressrosa)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-16">
+                                <div class="load-button" onclick="loadPDF('placeholder-16', 'https://drive.google.com')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Fish-Man Island and Whole Cake Island
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 22">
+                    <div class="cover-story-content">
+                        <h3>From the Decks of the World: The 500,000,000 Man Arc</h3>
+                        <p class="chapters">ch805-838 (Zou -> Whole Cake Island)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-17">
+                                <div class="load-button" onclick="loadPDF('placeholder-17', 'https://drive.google.com')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Dressrosa and Whole Cake Island
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 23">
+                    <div class="cover-story-content">
+                        <h3>The Stories of the Self-Proclaimed Straw Hat Grand Fleet ❎</h3>
+                        <p class="chapters">ch864-919 (Whole Cake Island -> Reverie)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-18">
+                                <div class="load-button" onclick="loadPDF('placeholder-18', 'https://drive.google.com')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Dressrosa and Reverie
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 24">
+                    <div class="cover-story-content">
+                        <h3>"Gang" Bege's Oh My Family</h3>
+                        <p class="chapters">ch948-994 (Wano)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-19">
+                                <div class="load-button" onclick="loadPDF('placeholder-19', 'https://drive.google.com')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place between the events of Whole Cake Island and Egghead
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 25">
+                    <div class="cover-story-content">
+                        <h3>Germa 66's Ahh... An Emotionless Excursion ❎</h3>
+                        <p class="chapters">ch1035-1078 (Wano -> Egghead)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-20">
+                                <div class="load-button" onclick="loadPDF('placeholder-20', 'https://drive.google.com')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place during the Reverie & Wano
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cover-story" data-number="No. 26">
+                    <div class="cover-story-content">
+                        <h3>Oni Child Yamato's Golden Harvest Surrogate Pilgrimage (ongoing)</h3>
+                        <p class="chapters">ch1109-____ (Egghead -> _______)</p>
+                        <div class="pdf-container">
+                            <div class="pdf-placeholder" id="placeholder-21">
+                                <div class="load-button" onclick="loadPDF('placeholder-21', 'https://drive.google.com')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            takes place after the events of Wano...
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Specials & Movies Tab -->
+        <div id="specials-movies" class="tab-content">
+            <div class="warning-box" style="background: rgba(78, 205, 196, 0.15); border: 1px solid rgba(78, 205, 196, 0.3); color: #4ecdc4; border-left: 4px solid #4ecdc4; margin-bottom: 2rem;">
+                <span class="warning-icon">📁</span>
+                <div>
+                    We have uploaded all Movies and Specials that aren't on streaming platforms in NA to a <a href="https://drive.google.com/drive/u/0/folders/1_UN22z2VXOKHL72rzLJpDbEVxyOMoynZ" style="color: #ff6b6b; text-decoration: underline; transition: all 0.3s ease;" target="_blank" onmouseover="this.style.color='#4ecdc4'; this.style.transform='translateX(3px)'" onmouseout="this.style.color='#ff6b6b'; this.style.transform='translateX(0)'">Google Drive</a>.
+                    <div></div>
+                    <strong>They do have subtitles, but to display them you have to download the video & view it using VLC Media Player!</strong>
+                </div>
+            </div>
+
+            <h2 style="margin: 2rem 0; color: #4ecdc4;">Canon Specials</h2>
+
+            <div class="specials-grid">
+                <div class="special-item">
+                    <h4>Monsters: 103 Mercies Dragon Damnation (2024)</h4>
+                    <div class="special-embed" style="aspect-ratio: unset; height: auto;">
+                        <img src="embeds/Monsters.jpg" alt="Monsters: 103 Mercies Dragon Damnation">
+                    </div>
+                    <p>This is an adaptation of a one-shot, that was written by Oda in 1994, before he started working on One Piece.</p>
+                    <p><em>Despite being a standalone, its main lead is part of the One Piece canon.</em></p>
+                    <p class="episodes"><a href="https://www.netflix.com/title/81733654" class="special-link" target="_blank">Viewable on Netflix</a><span style="color: #d0d0d0; margin-left: 10px;">(25min)</span></p>
+                </div>
+
+                <div class="special-item">
+                    <div class="title-with-download">
+                        <h4>One Piece Film Strong World: Episode 0 (2010)</h4>
+                        <a href="https://drive.google.com/uc?export=download&id=1dO-WvswITNLInom-td2bHo0qh28fzYtr" class="download-btn" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 12l-4-4h2.5V2h3v6H12l-4 4z"/>
+                                <path d="M2 14h12v1H2v-1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="special-embed clickable-video" onclick="window.open('https://drive.google.com/file/d/1dO-WvswITNLInom-td2bHo0qh28fzYtr/preview', '_blank')">
+                        <img src="embeds/Episode 0.png" alt="One Piece Film Strong World: Episode 0">
+                        <div class="play-overlay">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p>This is an adaptation of the one-shot "Chapter 0", which was written by Oda and released alongside one of the Marineford chapters.</p>
+                    <p><em>The events of this episode are canon & <u>also good to have as context going into Movie #10 (One Piece Film: Strong World)</u>.</em></p>
+                    <div class="warning-box yellow">
+                        <span class="warning-icon">⚠️</span>
+                        For some reason they thought it would be a good idea to basically spoil the majority of the movie in the preview for this episode...
+                        <strong>So be careful & skip about a quarter of the way into the video, and then backtrack to 1:45</strong>
+                    </div>
+                    <div class="warning-box" style="background: rgba(78, 205, 196, 0.15); border: 1px solid rgba(78, 205, 196, 0.3); color: #4ecdc4; border-left: 4px solid #4ecdc4;">
+                        <span class="warning-icon">🎵</span>
+                        <div>
+                            <strong>Important:</strong> For better audio quality, go to <em>Audio → Audio Track →</em> and change it to <em>"Japanese 2.0 <u>DVD</u> - [Japanese]"</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin: 2rem 0; color: #4ecdc4;">Movies <span style="color: #26887e; font-size: 0.8em;">(written and/or supervised by Oda)</span></h2>
+
+            <div class="specials-grid">
+                <div class="special-item">
+                    <h4>#10 – One Piece Film: Strong World (2009)</h4>
+                    <p>takes place between the events of Thriller Bark and Sabaody</p>
+                    <div class="special-embed movie-poster">
+                        <img src="embeds/Strong World.png" alt="One Piece Film: Strong World">
+                    </div>
+                    <p class="episodes" style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <span>
+                            <a href="https://www.netflix.com/title/80998781" class="special-link" target="_blank">Viewable on Netflix</a>
+                            <span style="color: #d0d0d0; margin-left: 10px;">(1h 55m)</span>
+                        </span>
+                        <span style="color: #888; font-size: 0.8em; font-style: italic; line-height: 1;">recommended to watch "Episode 0" before this</span>
+                    </p>
+                </div>
+
+                <div class="special-item">
+                    <h4>#12 – One Piece Film: Z (2012)</h4>
+                    <p>takes place between the events of Fish-Man Island and Punk Hazard</p>
+                    <div class="special-embed movie-poster">
+                        <img src="embeds/Z.jpg" alt="One Piece Film: Z">
+                    </div>
+                    <p class="episodes"><a href="https://www.netflix.com/title/80198443" class="special-link" target="_blank">Viewable on Netflix</a><span style="color: #d0d0d0; margin-left: 10px;">(1h 48m)</span></p>
+                </div>
+            </div>
+
+            <h2 style="margin: 2rem 0; color: #4ecdc4;">Non-Canon Specials <span style="color: #26887e; font-size: 0.8em;">(all ~5min)</span></h2>
+
+            <div class="non-canon-grid">
+                <div class="nissin-container">
+                    <h4>Nissin "Hungry Days" Cup Noodle - Promotional Series <span style="color: #26887e; font-size: 0.8em;">(by Studio Shaft)</span></h4>
+                    <div class="nissin-grid">
+                        <div class="nissin-item">
+                            <h5>Zoro</h5>
+                            <div class="nissin-embed">
+                                <iframe src="https://www.youtube-nocookie.com/embed/FgXzaiYKRaI?si=w2sRvd7zXvD_vtFb" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="nissin-item">
+                            <h5>Nami</h5>
+                            <div class="nissin-embed">
+                                <iframe src="https://www.youtube-nocookie.com/embed/vHU7UrD8atY?si=j8A7Vdhqvw0U6XHY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="nissin-item">
+                            <h5>Vivi</h5>
+                            <div class="nissin-embed">
+                                <iframe src="https://www.youtube-nocookie.com/embed/H72C0CzereI?si=oteElik737fZEsyV" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="nissin-item">
+                            <h5>Marineford</h5>
+                            <div class="nissin-embed">
+                                <iframe src="https://www.youtube-nocookie.com/embed/U4-71D75KcI?si=T5kKyxoCo4maXYrx" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bump-of-chicken-section">
+                        <h5>Hungry Days × One Piece × Bump of Chicken</h5>
+                        <p class="bump-disclaimer">Animated music video of the full song (by Bump of Chicken) from the 4 short Nissin Noodle commercials</p>
+                        <div class="bump-embed clickable-video" onclick="window.open('https://www.youtube-nocookie.com/embed/x5Prd-CQNnk?si=BWhbDbmSxOIHL6Gb', '_blank')">
+                            <img src="embeds/Bump of Chicken.jpg" alt="Hungry Days × One Piece × Bump of Chicken">
+                            <div class="play-overlay">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="extra-content-divider">
+                    <div class="extra-content-label">
+                        <span>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            Fun Extra Side Content
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="non-canon-row-1">
+
+                    <div class="non-canon-item">
+                        <div class="title-with-download">
+                            <h4>Jango's Dance Carnival</h4>
+                            <a href="https://drive.google.com/uc?export=download&id=1v_w9zLJB4Ugf3tBjqUPnC5J2Pq9dWjLC" class="download-btn" target="_blank">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 12l-4-4h2.5V2h3v6H12l-4 4z"/>
+                                    <path d="M2 14h12v1H2v-1z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="non-canon-embed clickable-video" onclick="window.open('https://drive.google.com/file/d/1v_w9zLJB4Ugf3tBjqUPnC5J2Pq9dWjLC/preview', '_blank')">
+                            <img src="embeds/Jango's Dance Carnival.png" alt="Jango's Dance Carnival">
+                            <div class="play-overlay">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="non-canon-item">
+                        <div class="title-with-download">
+                            <h4>Soccer King of Dreams</h4>
+                            <a href="https://drive.google.com/uc?export=download&id=1OSjAd2iq4zgGgd87gdqY43Y8VfzirxFF" class="download-btn" target="_blank">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 12l-4-4h2.5V2h3v6H12l-4 4z"/>
+                                    <path d="M2 14h12v1H2v-1z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="non-canon-embed clickable-video" onclick="window.open('https://drive.google.com/file/d/1OSjAd2iq4zgGgd87gdqY43Y8VfzirxFF/preview', '_blank')">
+                            <img src="embeds/Soccer King of Dreams.png" alt="Soccer King of Dreams">
+                            <div class="play-overlay">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="non-canon-item">
+                        <div class="title-with-download">
+                            <h4>The Pirate Baseball King</h4>
+                            <a href="https://drive.google.com/uc?export=download&id=1rqYl8RCaqb8qz_1TbgvvV3AhWhIwm3zs" class="download-btn" target="_blank">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 12l-4-4h2.5V2h3v6H12l-4 4z"/>
+                                    <path d="M2 14h12v1H2v-1z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="non-canon-embed clickable-video" onclick="window.open('https://drive.google.com/file/d/1rqYl8RCaqb8qz_1TbgvvV3AhWhIwm3zs/preview', '_blank')">
+                            <img src="embeds/The Pirate Baseball King.png" alt="The Pirate Baseball King">
+                            <div class="play-overlay">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <h2 style="margin: 2rem 0; color: #4ecdc4;">Non-Canon Movies <span style="color: #26887e; font-size: 0.8em;">(both =1h 35m)</span><span style="color: #26887e; font-size: 0.8em;"></span></h2>
+
+            <div class="specials-grid">
+                <div class="special-item">
+                    <div class="title-with-download">
+                        <h4>#04 – One Piece The Movie: Dead End Adventure (2003)</h4>
+                        <a href="https://drive.google.com/uc?export=download&id=1TO2XXpoBMhWogbIaAxOibeBE6MoiPJ8T" class="download-btn" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 12l-4-4h2.5V2h3v6H12l-4 4z"/>
+                                <path d="M2 14h12v1H2v-1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p>takes place between the events of Alabasta and Jaya</p>
+                    <div class="special-embed clickable-video" onclick="window.open('https://drive.google.com/file/d/1TO2XXpoBMhWogbIaAxOibeBE6MoiPJ8T/preview', '_blank')">
+                        <img src="embeds/Dead End Adventure.png" alt="One Piece The Movie: Dead End Adventure">
+                        <div class="play-overlay">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="special-item">
+                    <h4>#07 – One Piece The Movie: The Giant Mechanical Soldier of Karakuri Castle (2006)</h4>
+                    <p>takes place between the events of Skypiea and Water 7</p>
+                    <div class="warning-box yellow">
+                        <span class="warning-icon">⚠️</span>
+                        File was taken down
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filler Tab -->
+        <div id="filler" class="tab-content">
+            <div class="filler-timeline">
+                <div class="filler-item">
+                    <div class="episode-count">8</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">Warship Island Arc</h3>
+                        <span class="filler-episodes">Ep. 54-61</span>
+                    </div>
+                    <p class="filler-description">This is the first filler arc in One Piece and follows the Straw Hats <span class="spoiler" onclick="toggleSpoiler(this)">rescuing a girl and a dragon</span>. The person they throw overboard, on the way up Reverse Mountain, is one of the antagonists of the arc.</p>
+                </div>
+
+                <div class="filler-item">
+                    <div class="episode-count">2</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">mid-Alabasta Padding</h3>
+                        <span class="filler-episodes">Ep. 98-99</span>
+                    </div>
+                    <p class="filler-description">Wacky adventures with Ace while traveling the desert in Alabasta</p>
+                </div>
+
+                <div class="filler-item">
+                    <div class="episode-count">4</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">post-Alabasta (Character-centered)</h3>
+                        <span class="filler-episodes">Ep. 132-135</span>
+                    </div>
+                    <p class="filler-description">You watched the Chopper and Robin episode. The rest follow a similar formula, focusing on the Straw Hats and how they interact with the world, similar to the post-Enies Lobby filler episodes.</p>
+                </div>
+
+                <div class="filler-item">
+                    <div class="episode-count">3</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">Goat Island Arc</h3>
+                        <span class="filler-episodes">Ep. 136-138</span>
+                    </div>
+                    <p class="filler-description">One of the fillers before Jaya. Straw Hats find an uncharted island that <span class="spoiler" onclick="toggleSpoiler(this)">is occupied by an old man and a bunch of goats</span>.</p>
+                </div>
+
+                <div class="filler-item">
+                    <div class="episode-count">5</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">Ruluka Island Arc</h3>
+                        <span class="filler-episodes">Ep. 139-143</span>
+                    </div>
+                    <p class="filler-description">One of the fillers before Jaya. Follows the Straw Hats as they discover <span class="spoiler" onclick="toggleSpoiler(this)">an island that is ruled by a dictator who overworks his people</span>.</p>
+                </div>
+
+                <div class="filler-item">
+                    <div class="episode-count">5</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">Ocean's Dream Arc</h3>
+                        <span class="filler-episodes">Ep. 220-224</span>
+                    </div>
+                    <p class="filler-description">Filler based on a One Piece videogame for the PlayStation</p>
+                </div>
+
+                <div class="filler-item">
+                    <div class="episode-count">2</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">Foxy's Return Arc</h3>
+                        <span class="filler-episodes">Ep. 225-226</span>
+                    </div>
+                    <p class="filler-description">Somehow Palpatine returned</p>
+                </div>
+
+                <div class="filler-item special-filler">
+                    <div class="episode-count">5</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">Boss Luffy Historical Special</h3>
+                        <span class="filler-episodes">Ep. 291-292, 303, 406-407</span>
+                    </div>
+                    <p class="filler-description">Filler/special that is set in 19th century Japan</p>
+                </div>
+
+                <div class="filler-item">
+                    <div class="episode-count">10</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">Ice Hunter Arc</h3>
+                        <span class="filler-episodes">Ep. 326-335</span>
+                    </div>
+                    <p class="filler-description">Chronicles the journey of the Straw Hat Pirates from Water 7, into the Florian Triangle, coming close to a winter island.</p>
+                    <div class="filler-note">
+                        Episode 326 (from 06:51 to 10:30) is canon material showing features of the Sunny!
+                    </div>
+                </div>
+
+                <div class="filler-item">
+                    <div class="episode-count">3</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">Spa Island Arc</h3>
+                        <span class="filler-episodes">Ep. 382-384</span>
+                    </div>
+                    <p class="filler-description">Takes place after Thriller Bark. The Straw Hats discover a spa island and meet with some interesting characters.</p>
+                </div>
+
+                <div class="filler-item">
+                    <div class="episode-count">4</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">Little East Blue Arc</h3>
+                        <span class="filler-episodes">Ep. 426-429</span>
+                    </div>
+                    <p class="filler-description">Filler that is meant to lead into movie #10 (One Piece Film: Strong World)</p>
+                </div>
+
+                <div class="filler-item">
+                    <div class="episode-count">2</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">Special Retrospective Before Marineford</h3>
+                        <span class="filler-episodes">Ep. 457-458</span>
+                    </div>
+                    <p class="filler-description">"The Siblings' Vow!" – Recap episodes for what happened before Ace got caught by Blackbeard</p>
+                </div>
+
+                <div class="filler-item special-filler">
+                    <div class="episode-count">2</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">The Strongest Tag-Team! Luffy and Toriko's Hard Struggle!</h3>
+                        <span class="filler-episodes">Ep. 492</span>
+                    </div>
+                    <p class="filler-description">Crossover episode with Toriko (first half of this is Toriko Ep. 1)</p>
+                </div>
+
+                <div class="filler-item special-filler">
+                    <div class="episode-count">2</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">Team Formation! Save Chopper</h3>
+                        <span class="filler-episodes">Ep. 542</span>
+                    </div>
+                    <p class="filler-description">Crossover episode with Toriko (first half of this is Toriko Ep. 51)</p>
+                </div>
+
+                <div class="filler-item">
+                    <div class="episode-count">4</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">Z's Ambition Arc</h3>
+                        <span class="filler-episodes">Ep. 575-578</span>
+                    </div>
+                    <p class="filler-description">Filler that is meant to lead into movie #12 (One Piece Film: Z)</p>
+                </div>
+
+                <div class="filler-item special-filler">
+                    <div class="episode-count">2</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">History's Strongest Collaboration vs. Glutton of the Sea</h3>
+                        <span class="filler-episodes">Ep. 590</span>
+                    </div>
+                    <p class="filler-description">Crossover episode with Toriko & Dragon Ball Z (first half of this is Toriko Ep. 99)</p>
+                </div>
+
+                <div class="filler-item">
+                    <div class="episode-count">3</div>
+                    <div class="filler-header">
+                        <h3 class="filler-title">Caesar's Retrieval Arc</h3>
+                        <span class="filler-episodes">Ep. 626-628</span>
+                    </div>
+                    <p class="filler-description">The already-kidnapped Caesar gets kidnapped...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPs & EDs Tab -->
+        <div id="ops-eds" class="tab-content">
+            <div class="ops-eds-list">
+
+                <h2 style="margin: 2rem 0; color: #4ecdc4;">Openings</h2>
+
+                <div class="ops-eds-item four-three">
+                    <div class="ops-eds-content">
+                        <h4>One Piece 4Kids Opening – Pirate Rap</h4>
+                        <p class="episodes">Episodes 1-143*</p>
+                        <p>Opening theme used in every episode of the 4Kids Dub.</p>
+                        <p></p><p></p>
+                        <p class="episodes" style="color: #888; font-size: 1.1em; line-height: 1.3; margin-top: 0.5rem;">* discontinued; with the 4Kids Dub ending on the episode with the old ship coming crashing down from Skypiea, straight onto the Straw Hats, looking like it is about to smash every last one of them into pieces ⚰️😔🪦🕊️💔</p>
+                    </div>
+                    <div class="ops-eds-video clickable-video" onclick="window.open('https://www.youtube-nocookie.com/embed/kwYP8IOU4P0?si=ZBot1eLiVgsnhV3E', '_blank')">
+                        <img src="embeds/4Kids.jpg" alt="One Piece 4Kids Opening – Pirate Rap" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="play-overlay">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="episodes" style="color: #4ecdc4; font-size: 1.8em; font-style: italic; line-height: 1.3; margin-top: 0.5rem;">...</p>
+            
+                <div class="ops-eds-item">
+                    <div class="ops-eds-content">
+                        <h4>Opening #16 – Hands Up!</h4>
+                        <p class="episodes">Episodes 591-618*</p>
+                        <p>This opening plays during the Punk Hazard Arc.</p>
+                        <p></p><p></p><p></p><p></p>
+                        <p class="episodes" style="color: #888; font-size: 1em; font-style: italic; line-height: 1.3; margin-top: 0.5rem;">* it goes back to Opening #15 on Crunchyroll for Eps. 619-628</p>
+                    </div>
+                    <div class="ops-eds-video">
+                        <iframe src="https://www.youtube-nocookie.com/embed/CW7kciiPtk8?si=ju-Q4Lpv50jlw7K_" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            
+                <div class="ops-eds-item spoiler-blocked" id="opening-17-v1">   <!-- remove ' spoiler-blocked' -->
+                    <div class="ops-eds-content">
+                        <h4>Opening #17 (v1) – Hands Up!</h4>
+                        <p class="episodes">Episodes 629-662</p>
+                        <p>This opening plays during the Dressrosa Arc.</p>
+                    </div>
+                    <div class="ops-eds-video spoiler-blocked">   <!-- remove ' spoiler-blocked' -->
+                        <iframe src="https://www.youtube-nocookie.com/embed/D2j7Iol_9Zo?si=62pGNMh0v-ugaiTc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <!-- REMOVE THIS SECTION TO UNHIDE -->
+                        <div class="spoiler-overlay">
+                            <div class="spoiler-text">SAFE AFTER EP. 6<span class="blurred-digits">43</span></div>
+                        </div>
+                        <!-- END REMOVABLE SECTION -->
+                    </div>
+                </div>
+
+                <div class="ops-eds-item spoiler-blocked" id="opening-17-v2">   <!-- remove ' spoiler-blocked' -->
+                    <div class="ops-eds-content">
+                        <h4>Opening #17 (v2) – Hands Up!</h4>
+                        <p class="episodes">Episodes 663-686</p>
+                        <p>This opening plays during the Dressrosa Arc.</p>
+                    </div>
+                    <div class="ops-eds-video spoiler-blocked">   <!-- remove ' spoiler-blocked' -->
+                        <iframe src="https://www.youtube-nocookie.com/embed/vIR2MugGYXA?si=pA40h2ZHJLawLeTW" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <!-- REMOVE THIS SECTION TO UNHIDE -->
+                        <div class="spoiler-overlay">
+                            <div class="spoiler-text">SAFE AFTER EP. 6<span class="blurred-digits">73</span></div>
+                        </div>
+                        <!-- END REMOVABLE SECTION -->
+                    </div>
+                </div>
+
+                <div class="ops-eds-item spoiler-blocked" id="opening-18">   <!-- remove ' spoiler-blocked' -->
+                    <div class="ops-eds-content">
+                        <h4>Opening #18 – Hard Knock Days</h4>
+                        <p class="episodes">Episodes 687-746</p>
+                        <p>This opening plays during the Dressrosa Arc.</p>
+                    </div>
+                    <div class="ops-eds-video spoiler-blocked">   <!-- remove ' spoiler-blocked' -->
+                        <iframe src="https://www.youtube-nocookie.com/embed/A52j3oiK0fg?si=rCPAqX-V4iB7aDms" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <!-- REMOVE THIS SECTION TO UNHIDE -->
+                        <div class="spoiler-overlay">
+                            <div class="spoiler-text">SAFE AFTER EP. 7<span class="blurred-digits">02</span></div>
+                        </div>
+                        <!-- END REMOVABLE SECTION -->
+                    </div>
+                </div>
+
+                <p class="episodes" style="color: #4ecdc4; font-size: 1.8em; font-style: italic; line-height: 1.3; margin-top: 0.5rem;">...</p>
+
+                <div class="ops-eds-item">
+                    <div class="ops-eds-content">
+                        <h4>One Piece Log: Fish-Man Island Saga – Opening</h4>
+                        <p class="episodes">Episodes 1-9</p>
+                        <p>Special opening made for the Fish-Man Island Remake.</p>
+                        <div class="warning-box yellow">
+                            <span class="warning-icon">⚠️</span>
+                            If you watch it on Crunchyroll, beware that Eps. 10-13, 14-17, 18-21 have three different versions of the original opening, which are covers by Japanese YouTubers & VTubers.
+                        </div>
+                    </div>
+                    <div class="ops-eds-video">
+                        <iframe src="https://www.youtube-nocookie.com/embed/N5kOymBivr0?si=pp7AwQh3SkCjQvvt" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <p class="episodes" style="color: #4ecdc4; font-size: 1.8em; font-style: italic; line-height: 1.3; margin-top: 0.5rem;">...</p>
+
+                <h2 style="margin: 2rem 0; color: #4ecdc4;">Endings</h2>
+
+                <p class="episodes" style="color: #4ecdc4; font-size: 1.8em; font-style: italic; line-height: 1.3; margin-top: 0.5rem;">...</p>
+
+                <div class="ops-eds-item">
+                    <div class="ops-eds-content">
+                        <h4>One Piece Log: Fish-Man Island Saga – Ending</h4>
+                        <p class="episodes">Episodes 1-21</p>
+                        <p>Special ending made for the Fish-Man Island Remake.</p>
+                    </div>
+                    <div class="ops-eds-video">
+                        <iframe src="https://www.youtube-nocookie.com/embed/1-_B5gioYwA?si=sS13o8UHL2WUy263" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <p class="episodes" style="color: #4ecdc4; font-size: 1.8em; font-style: italic; line-height: 1.3; margin-top: 0.5rem;">...</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            document.getElementById(tabName).classList.add('active');
+
+            event.target.classList.add('active');
+
+            const activeContent = document.getElementById(tabName);
+            activeContent.style.animation = 'none';
+            setTimeout(() => {
+                activeContent.style.animation = 'fadeIn 0.5s ease-out';
+            }, 10);
+        }
+
+        function loadPDF(placeholderId, pdfUrl) {
+            const placeholder = document.getElementById(placeholderId);
+            
+            // Check if it's a local PDF (doesn't start with http)
+            if (!pdfUrl.startsWith('http')) {
+                // For local PDFs, use object tag with new tab button
+                placeholder.innerHTML = `
+                    <div style="position: relative; width: 100%; height: 100%;">
+                        <object data="${pdfUrl}" type="application/pdf" style="width: 100%; height: 100%;">
+                            <p>PDF cannot be displayed. <a href="${pdfUrl}" target="_blank">Download PDF</a></p>
+                        </object>
+                        <button onclick="window.open('${pdfUrl}', '_blank')" 
+                                style="position: absolute;
+                                    top: 50%;
+                                    right: 8px;
+                                    transform: translateY(-50%);
+                                    background: rgba(0, 0, 0, 0.7); 
+                                    border: 1px solid rgba(255, 255, 255, 0.3);
+                                    border-radius: 50%; 
+                                    width: 32px;
+                                    height: 32px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: white; 
+                                    cursor: pointer; 
+                                    transition: all 0.3s ease;
+                                    backdrop-filter: blur(5px);
+                                    z-index: 10;"
+                                onmouseover="this.style.background='rgba(255, 107, 107, 0.9)'; this.style.transform='translateY(-50%) scale(1.1)'"
+                                onmouseout="this.style.background='rgba(0, 0, 0, 0.7)'; this.style.transform='translateY(-50%) scale(1)'"
+                                title="Open in new tab">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                `;
+            } else {
+                // Keep Google Drive iframe for external URLs (if any remain)
+                const versionedUrl = `${pdfUrl}${pdfUrl.includes('?') ? '&' : '?'}v=${SITE_VERSION}`;
+                placeholder.innerHTML = `<iframe src="${versionedUrl}" allow="autoplay"></iframe>`;
+            }
+            placeholder.classList.remove('pdf-placeholder');
+        }
+
+        function toggleFullscreen(placeholderId) {
+            const container = document.getElementById(placeholderId);
+            const pdfContainer = container.closest('.pdf-container');
+            
+            if (!document.fullscreenElement) {
+                pdfContainer.requestFullscreen().then(() => {
+                    // Temporarily increase height when in fullscreen
+                    pdfContainer.style.height = '100vh';
+                }).catch(err => {
+                    console.error(`Error attempting to enable fullscreen: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen().then(() => {
+                    // Reset height when exiting fullscreen
+                    pdfContainer.style.height = '120px';
+                });
+            }
+        }
+
+        // Listen for fullscreen changes to reset styles
+        document.addEventListener('fullscreenchange', () => {
+            if (!document.fullscreenElement) {
+                // Reset all pdf containers when exiting fullscreen
+                document.querySelectorAll('.pdf-container').forEach(container => {
+                    container.style.height = '120px';
+                });
+            }
+        });
+
+        function loadAllPDFs() {
+            const button = document.getElementById('loadAllBtn');
+            const container = document.querySelector('.load-all-container');
+            
+            button.disabled = true;
+            button.classList.add('loading');
+            button.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Loading...';
+            
+            // PDF URLs array - matches your existing placeholders
+            const pdfData = [
+                { id: 'placeholder-1', url: './Colored Cover Stories (with notes)/01.pdf' },
+                { id: 'placeholder-2', url: './Colored Cover Stories (with notes)/02.pdf' },
+                { id: 'placeholder-3', url: './Colored Cover Stories (with notes)/03.pdf' },
+                { id: 'placeholder-4', url: './Colored Cover Stories (with notes)/04.pdf' },
+                { id: 'placeholder-5', url: './Colored Cover Stories (with notes)/05.pdf' },
+                { id: 'placeholder-6', url: './Colored Cover Stories (with notes)/06.pdf' },
+                { id: 'placeholder-7', url: './Colored Cover Stories (with notes)/07.pdf' },
+                { id: 'placeholder-8', url: './Colored Cover Stories (with notes)/08.pdf' },
+                { id: 'placeholder-13', url: './Colored Cover Stories (with notes)/09_0.pdf' },
+                { id: 'placeholder-9', url: './Colored Cover Stories (with notes)/09.pdf' },
+                { id: 'placeholder-14', url: './Colored Cover Stories (with notes)/10_0.pdf' },
+                { id: 'placeholder-10', url: './Colored Cover Stories (with notes)/10.pdf' },
+                { id: 'placeholder-11', url: './Colored Cover Stories (with notes)/11.pdf' },
+                { id: 'placeholder-12', url: './Colored Cover Stories (with notes)/12.pdf' },
+                { id: 'placeholder-15', url: 'https://drive.google.com' },
+                { id: 'placeholder-16', url: 'https://drive.google.com' },
+                { id: 'placeholder-17', url: 'https://drive.google.com' },
+                { id: 'placeholder-18', url: 'https://drive.google.com' },
+                { id: 'placeholder-19', url: 'https://drive.google.com' },
+                { id: 'placeholder-20', url: 'https://drive.google.com' },
+                { id: 'placeholder-21', url: 'https://drive.google.com' }
+            ];
+            
+            // Load each PDF with a small delay to prevent overwhelming the browser
+            pdfData.forEach((pdf, index) => {
+                setTimeout(() => {
+                    loadPDF(pdf.id, pdf.url);
+                    
+                    // Hide container when all are loaded
+                    if (index === pdfData.length - 1) {
+                        button.classList.remove('loading');
+                        setTimeout(() => {
+                            container.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+                            container.style.opacity = '0';
+                            container.style.transform = 'translateY(-20px)';
+                            
+                            setTimeout(() => {
+                                container.style.display = 'none';
+                            }, 500);
+                        }, 500);
+                    }
+                }, index * 200); // 200ms delay between each load
+            });
+        }
+
+        function initializeStaggeredAnimation() {
+            const coverStories = document.querySelectorAll('.cover-story');
+            coverStories.forEach((story, index) => {
+                story.style.setProperty('--item-index', index);
+                story.style.opacity = '0';
+                story.style.transform = 'translateY(30px) scale(0.95)';
+                
+                // Trigger animation after a brief delay
+                setTimeout(() => {
+                    story.style.animation = `slideInUp 0.6s ease-out forwards`;
+                    story.style.animationDelay = `${index * 0.1}s`;
+                }, 100);
+            });
+        }
+
+        // Call the function when the DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializeStaggeredAnimation);
+
+        function toggleSpoiler(element) {
+            element.classList.toggle('revealed');
+        }
+
+        const scrollBtn = document.getElementById('scrollToggle');
+        const scrollIcon = document.getElementById('scrollIcon');
+
+        function updateScrollButton() {
+            const scrolled = window.scrollY;
+            const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+
+            if (scrolled > 300) {
+                if (nearBottom) {
+                    // Near bottom - show up arrow (chevron-up)
+                    scrollIcon.innerHTML = '<path d="m18 15-6-6-6 6"/>';
+                    scrollBtn.onclick = () => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    };
+                } else {
+                    // Middle of page - show down arrow (chevron-down)
+                    scrollIcon.innerHTML = '<path d="m6 9 6 6 6-6"/>';
+                    scrollBtn.onclick = () => {
+                        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                    };
+                }
+                scrollBtn.style.display = 'block';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        }
+        window.addEventListener('scroll', updateScrollButton);
+        updateScrollButton();
+    </script>
+</body>
