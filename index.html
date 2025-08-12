@@ -1107,5 +1107,22 @@
         }
         window.addEventListener('scroll', updateScrollButton);
         updateScrollButton();
+        
+        let isScrolled = false;
+
+        function updateTabContainer() {
+            const tabContainer = document.querySelector('.tab-container');
+            const scrolled = window.scrollY > 300; // Adjust threshold as needed
+            
+            if (scrolled && !isScrolled) {
+                tabContainer.classList.add('scrolled');
+                isScrolled = true;
+            } else if (!scrolled && isScrolled) {
+                tabContainer.classList.remove('scrolled');
+                isScrolled = false;
+            }
+        }
+
+        window.addEventListener('scroll', updateTabContainer);
     </script>
 </body>
