@@ -1488,16 +1488,23 @@ h1 {
 
 .legend-notice {
     color: #777;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 2.5rem;
     opacity: 0.8;
     letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 
-.legend-notice .separator {
-    margin: 0 3rem;
+@media (max-width: 600px) {
+    .legend-notice {
+        gap: 1rem;
+    }
 }
 
 .sunny-gallery {
