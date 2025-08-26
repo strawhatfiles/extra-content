@@ -120,7 +120,7 @@ h1 {
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
     position: relative;
     overflow: hidden;
@@ -667,6 +667,93 @@ h1 {
 
 .warning-icon {
     flex-shrink: 0;
+}
+
+.load-all-container {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.load-all-btn {
+    padding: 1.2rem 2.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #4ecdc4;
+    border-radius: 8px;
+    color: #4ecdc4;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.load-all-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(78, 205, 196, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.load-all-btn:hover {
+    background: rgba(78, 205, 196, 0.1);
+    color: #fff;
+    border-color: #ff6b6b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(78, 205, 196, 0.3);
+}
+
+.load-all-btn:hover::before {
+    left: 100%;
+}
+
+.load-all-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+    background: rgba(0, 0, 0, 0.4);
+    border-color: #666;
+    color: #999;
+}
+
+.load-all-btn:disabled:hover {
+    background: rgba(0, 0, 0, 0.4);
+    color: #999;
+    border-color: #666;
+    box-shadow: none;
+}
+
+.load-all-btn.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.load-all-btn.loading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4ecdc4, #ff6b6b);
+    animation: progress 2s ease-out forwards;
+}
+
+@keyframes progress {
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 .non-canon-grid {
@@ -1413,22 +1500,9 @@ h1 {
     margin: 0 3rem;
 }
 
-@media (max-width: 1200px) {
-    .sunny-gallery {
-        grid-template-columns: repeat(5, 1fr) !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .sunny-gallery {
-        grid-template-columns: repeat(3, 1fr) !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .sunny-gallery {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
+.sunny-gallery {
+    grid-template-columns: repeat(5, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .lightbox {
@@ -1448,10 +1522,12 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 90%;
+    max-width: 95%;
     max-height: 90%;
+    width: 95%;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
 }
 
 .lightbox-close {
@@ -1467,4 +1543,40 @@ h1 {
 
 .lightbox-close:hover {
     color: #ff6b6b;
+}
+
+.pdf-mobile-fallback {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    color: #4ecdc4;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pdf-mobile-fallback::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(78, 205, 196, 0.1), transparent);
+    animation: shimmer 2s infinite;
+}
+
+.pdf-mobile-fallback:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(78, 205, 196, 0.5);
+    transform: translateY(-2px);
 }
