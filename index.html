@@ -29,8 +29,8 @@
     <link rel="preconnect" href="https://www.netflix.com">
 
     <!-- Stylesheet + Version-Based Cache Busting -->
-    <link rel="stylesheet" href="styles.css?v=0.9.0">
-    <script>const SITE_VERSION = "0.9.0";</script>
+    <link rel="stylesheet" href="styles.css?v=0.9.1">
+    <script>const SITE_VERSION = "0.9.1";</script>
 </head>
 <body>
     <div class="header">
@@ -127,16 +127,18 @@
                 <div style="flex: 1; min-width: 0;">
                     <h2 style="margin: 0 0 1rem 0; color: #4ecdc4; font-size: 1.2rem;">7(+1) Warlords as Children <span style="color: #26887e; font-size: 0.8em;">(Vol. 63 – Fish-Man Island Arc)</span></h2>
                     <img src="embeds/SBS/SBS Vol.63 - Shichibukai as Children.webp" alt="Shichibukai as Children" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3); cursor: pointer;" onclick="openLightbox(this.src)">
+                    <p style="color: #888; font-size: 0.75rem; margin: 0.5rem 0 0 0; font-style: italic; text-align: center; width: 100%;">Jinbe, Mihawk, Moria, Hancock, Crocodile, Kuma, Doflamingo, Teach</p>
                 </div>
                 <div style="flex: 1; min-width: 0;">
                     <h2 style="margin: 0 0 1rem 0; color: #4ecdc4; font-size: 1.2rem;">11(-2) Supernovas as Children <span style="color: #26887e; font-size: 0.8em;">(Vol. 64 – Fish-Man Island Arc)</span></h2>
                     <img src="embeds/SBS/SBS Vol.64 - non-Straw Hat Supernovas as Children.webp" alt="Supernovas as Children" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3); cursor: pointer;" onclick="openLightbox(this.src)">
+                    <p style="color: #888; font-size: 0.75rem; margin: 0.5rem 0 0 0; font-style: italic; text-align: center; width: 100%;">Apoo, Law, Killer, Drake, Bege, Hawkins, Bonney, Kidd, Urouge</p>
                 </div>
             </div>
             <div class="warning-box yellow">
                 <span class="warning-icon">📝</span>
                 <div>
-                    <strong>Urouge in the present story</strong>, with his downward-pointing wings – like all of Enel's troops (Satori, Gedatsu, Shura, Ohm, and the rest of his goons) that came from Birka had them – <strong>is clearly Birkan, however, according to this SBS, he seems to have been (born?) Skypiean as a child</strong>.
+                    <strong>Urouge in the present story</strong> has (the for Birkans typical) downward-pointing wings – just like all of Enel's troops (Satori, Gedatsu, Shura, Ohm, and the rest of his goons) did – <strong>however, according to this SBS, he seems to have been born(?) Skypiean</strong>.
                 </div>
             </div>
 
@@ -146,6 +148,15 @@
 
         <!-- Cover Stories Tab -->
         <div id="cover-stories" class="tab-content active">
+
+            <div class="load-all-container" id="mobileLoadAllContainer" style="display: none;">
+                <button class="load-all-btn" onclick="loadAllPDFs()" id="loadAllBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    Load All PDFs
+                </button>
+            </div>
 
             <div class="cover-stories-grid">
 
@@ -392,7 +403,8 @@
             <div class="warning-box" style="background: rgba(78, 205, 196, 0.15); border: 1px solid rgba(78, 205, 196, 0.3); color: #4ecdc4; border-left: 4px solid #4ecdc4; margin-bottom: 2rem;">
                 <span class="warning-icon">📁</span>
                 <div>
-                    All Movies and Specials that aren't on streaming platforms in NA are in this <a href="https://drive.google.com/drive/u/0/folders/1_UN22z2VXOKHL72rzLJpDbEVxyOMoynZ" style="color: #ff6b6b; text-decoration: underline; transition: all 0.3s ease;" target="_blank" onmouseover="this.style.color='#4ecdc4'; this.style.transform='translateX(3px)'" onmouseout="this.style.color='#ff6b6b'; this.style.transform='translateX(0)'">Google Drive</a>.                    <div></div>
+                    All Movies and Specials that aren't on streaming platforms in NA are in this <a href="https://drive.google.com/drive/u/0/folders/1_UN22z2VXOKHL72rzLJpDbEVxyOMoynZ" style="color: #ff6b6b; text-decoration: underline; transition: all 0.3s ease;" target="_blank" onmouseover="this.style.color='#4ecdc4'; this.style.transform='translateX(3px)'" onmouseout="this.style.color='#ff6b6b'; this.style.transform='translateX(0)'">Google Drive</a>.
+                    <div></div>
                     <strong>They do have subtitles, but to display them you have to download the video & view it using VLC Media Player!</strong>
                 </div>
             </div>
@@ -422,7 +434,7 @@
                         </a>
                     </div>
                     <div class="special-embed clickable-video" onclick="window.open('https://drive.google.com/file/d/1dO-WvswITNLInom-td2bHo0qh28fzYtr/preview', '_blank')">
-                        <img src="embeds/posters/Episode%200.png" alt="One Piece Film Strong World: Episode 0">
+                        <img src="embeds/posters/Episode 0.png" alt="One Piece Film Strong World: Episode 0">
                         <div class="play-overlay">
                             <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M8 5v14l11-7z"/>
@@ -454,7 +466,7 @@
                     <h4>#10 – One Piece Film: Strong World (2009)</h4>
                     <p>takes place between the events of Thriller Bark and Sabaody</p>
                     <div class="special-embed movie-poster">
-                        <img src="embeds/posters/Strong%20World.png" alt="One Piece Film: Strong World">
+                        <img src="embeds/posters/Strong World.png" alt="One Piece Film: Strong World">
                     </div>
                     <p class="episodes" style="display: flex; justify-content: space-between; align-items: baseline;">
                         <span>
@@ -537,7 +549,7 @@
                         <h5>Hungry Days × One Piece × Bump of Chicken</h5>
                         <p class="bump-disclaimer">Animated music video of the full song (by Bump of Chicken) from the 4 short Nissin Noodle commercials</p>
                         <div class="bump-embed clickable-video" onclick="window.open('https://www.youtube-nocookie.com/embed/x5Prd-CQNnk?si=BWhbDbmSxOIHL6Gb', '_blank')">
-                            <img src="embeds/thumbnails/Bump%20of%20Chicken.jpg" alt="Hungry Days × One Piece × Bump of Chicken">
+                            <img src="embeds/thumbnails/Bump of Chicken.jpg" alt="Hungry Days × One Piece × Bump of Chicken">
                             <div class="play-overlay">
                                 <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M8 5v14l11-7z"/>
@@ -575,7 +587,7 @@
                             </a>
                         </div>
                         <div class="non-canon-embed clickable-video" onclick="window.open('https://drive.google.com/file/d/1v_w9zLJB4Ugf3tBjqUPnC5J2Pq9dWjLC/preview', '_blank')">
-                            <img src="embeds/posters/Jango's%20Dance%20Carnival.png" alt="Jango's Dance Carnival">
+                            <img src="embeds/posters/Jango's Dance Carnival.png" alt="Jango's Dance Carnival">
                             <div class="play-overlay">
                                 <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M8 5v14l11-7z"/>
@@ -595,7 +607,7 @@
                             </a>
                         </div>
                         <div class="non-canon-embed clickable-video" onclick="window.open('https://drive.google.com/file/d/1OSjAd2iq4zgGgd87gdqY43Y8VfzirxFF/preview', '_blank')">
-                            <img src="embeds/posters/Soccer%20King%20of%20Dreams.png" alt="Soccer King of Dreams">
+                            <img src="embeds/posters/Soccer King of Dreams.png" alt="Soccer King of Dreams">
                             <div class="play-overlay">
                                 <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M8 5v14l11-7z"/>
@@ -615,7 +627,7 @@
                             </a>
                         </div>
                         <div class="non-canon-embed clickable-video" onclick="window.open('https://drive.google.com/file/d/1rqYl8RCaqb8qz_1TbgvvV3AhWhIwm3zs/preview', '_blank')">
-                            <img src="embeds/posters/The%20Pirate%20Baseball%20King.png" alt="The Pirate Baseball King">
+                            <img src="embeds/posters/The Pirate Baseball King.png" alt="The Pirate Baseball King">
                             <div class="play-overlay">
                                 <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M8 5v14l11-7z"/>
@@ -643,7 +655,7 @@
                     </div>
                     <p>takes place between the events of Alabasta and Jaya</p>
                     <div class="special-embed clickable-video" onclick="window.open('https://drive.google.com/file/d/1TO2XXpoBMhWogbIaAxOibeBE6MoiPJ8T/preview', '_blank')">
-                        <img src="embeds/posters/Dead%20End%20Adventure.png" alt="One Piece The Movie: Dead End Adventure">
+                        <img src="embeds/posters/Dead End Adventure.png" alt="One Piece The Movie: Dead End Adventure">
                         <div class="play-overlay">
                             <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M8 5v14l11-7z"/>
@@ -1078,40 +1090,165 @@
             }, 50);
         }
 
-        function createPDFEmbed(pdfPath) {
-            return `
-                <div style="position: relative; width: 100%; height: 100%;">
-                    <object data="${pdfPath}#view=Fit" type="application/pdf" 
-                            style="width: 160%; height: 100%; margin-left: -30%; border: none;">
-                        <p>PDF cannot be displayed. <a href="${pdfPath}" target="_blank">Download PDF</a></p>
-                    </object>
-                    <button onclick="window.open('${pdfPath}', '_blank')" 
-                            style="position: absolute;
-                                top: 50%;
-                                right: 8px;
-                                transform: translateY(-50%);
-                                background: rgba(0, 0, 0, 0.7); 
-                                border: 1px solid rgba(255, 255, 255, 0.3);
-                                border-radius: 50%; 
-                                width: 32px;
-                                height: 32px;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: white; 
-                                cursor: pointer; 
-                                transition: all 0.3s ease;
-                                backdrop-filter: blur(5px);
-                                z-index: 10;"
-                            onmouseover="this.style.background='rgba(255, 107, 107, 0.9)'; this.style.transform='translateY(-50%) scale(1.1)'"
-                            onmouseout="this.style.background='rgba(0, 0, 0, 0.7)'; this.style.transform='translateY(-50%) scale(1)'"
-                            title="Open in new tab">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
-                        </svg>
-                    </button>
-                </div>
-            `;
+        function createPDFEmbed(pdfPath, pdfId, driveUrl) {
+            const supportsPDF = (function() {
+                const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+                const isSmallScreen = window.innerWidth <= 768;
+
+                const userAgent = navigator.userAgent.toLowerCase();
+                const isMobileBrowser = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini|mobile|tablet/i.test(userAgent);
+
+                let hasPDFSupport;
+                try {
+                    hasPDFSupport = navigator.pdfViewerEnabled || 
+                                (navigator.plugins && Array.from(navigator.plugins).some(plugin => 
+                                    plugin.name.toLowerCase().includes('pdf')));
+                } catch (e) {
+                    hasPDFSupport = false;
+                }
+
+                return !isTouchDevice && !isSmallScreen && !isMobileBrowser && hasPDFSupport;
+            })();
+            
+            if (supportsPDF) {
+                // Native PDF embed
+                return `
+                    <div style="position: relative; width: 100%; height: 100%;">
+                        <object data="${pdfPath}#view=Fit" type="application/pdf" 
+                                style="width: 160%; height: 100%; margin-left: -30%; border: none;">
+                            <div class="pdf-placeholder" id="placeholder-${pdfId}">
+                                <div class="load-button" onclick="loadPDF('placeholder-${pdfId}', '${driveUrl}')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
+                                </div>
+                            </div>
+                        </object>
+                        <button onclick="window.open('${pdfPath}', '_blank')" 
+                                style="position: absolute;
+                                    top: 50%;
+                                    right: 8px;
+                                    transform: translateY(-50%);
+                                    background: rgba(0, 0, 0, 0.7); 
+                                    border: 1px solid rgba(255, 255, 255, 0.3);
+                                    border-radius: 50%; 
+                                    width: 32px;
+                                    height: 32px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: white; 
+                                    cursor: pointer; 
+                                    transition: all 0.3s ease;
+                                    backdrop-filter: blur(5px);
+                                    z-index: 10;"
+                                onmouseover="this.style.background='rgba(255, 107, 107, 0.9)'; this.style.transform='translateY(-50%) scale(1.1)'"
+                                onmouseout="this.style.background='rgba(0, 0, 0, 0.7)'; this.style.transform='translateY(-50%) scale(1)'"
+                                title="Open in new tab">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                `;
+            } else {
+                // Mobile or no PDF support
+                return `
+                    <div class="pdf-placeholder" id="placeholder-${pdfId}">
+                        <div class="load-button" onclick="loadPDF('placeholder-${pdfId}', '${driveUrl}')">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <span>Load PDF</span>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        function loadPDF(placeholderId, pdfUrl) {
+            const versionedUrl = `${pdfUrl}${pdfUrl.includes('?') ? '&' : '?'}v=${SITE_VERSION}`;
+            const placeholder = document.getElementById(placeholderId);
+            placeholder.innerHTML = `<iframe src="${versionedUrl}" allow="autoplay"></iframe>`;
+            placeholder.classList.remove('pdf-placeholder');
+        }
+
+        function loadAllPDFs() {
+            const supportsPDF = (function() {
+                const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+                const isSmallScreen = window.innerWidth <= 768;
+
+                const userAgent = navigator.userAgent.toLowerCase();
+                const isMobileBrowser = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini|mobile|tablet/i.test(userAgent);
+
+                let hasPDFSupport;
+                try {
+                    hasPDFSupport = navigator.pdfViewerEnabled ||
+                        (navigator.plugins && Array.from(navigator.plugins).some(plugin =>
+                            plugin.name.toLowerCase().includes('pdf')));
+                } catch (e) {
+                    hasPDFSupport = false;
+                }
+
+                return !isTouchDevice && !isSmallScreen && !isMobileBrowser && hasPDFSupport;
+            })();
+
+            if (supportsPDF) return; // early return
+            
+            const button = document.getElementById('loadAllBtn');
+            if (!button) return;
+            
+            const container = document.querySelector('.load-all-container');
+            
+            button.disabled = true;
+            button.classList.add('loading');
+            button.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Loading...';
+            
+            // PDF URLs array for mobile
+            const pdfData = [
+                { id: 'placeholder-1', url: 'https://drive.google.com/file/d/1o1m-AOBmkYQnOCbGpgNqfuhypJw0LyFb/preview' },
+                { id: 'placeholder-2', url: 'https://drive.google.com/file/d/1ZMN2h90f8dtrsGeeJaFlMQ2ilexzjGNZ/preview' },
+                { id: 'placeholder-3', url: 'https://drive.google.com/file/d/1DGH137BYqBw8nk0Z7sSyo8o43ONz81Wf/preview' },
+                { id: 'placeholder-4', url: 'https://drive.google.com/file/d/11NCJhE-fjhxVzkF76g8vK9cK9jElHMLU/preview' },
+                { id: 'placeholder-5', url: 'https://drive.google.com/file/d/1jwst7A5x5-XdCp2uRMSV1Bzkcz3nyyZ5/preview' },
+                { id: 'placeholder-6', url: 'https://drive.google.com/file/d/1RG7C-0-w66xkNGV-BBma9wKuDrTzuiKS/preview' },
+                { id: 'placeholder-7', url: 'https://drive.google.com/file/d/1srYxhyx1WsHqzaXHAFr041A4qgVaqKxn/preview' },
+                { id: 'placeholder-8', url: 'https://drive.google.com/file/d/1E_rMKM3q0fsiRZSzUuJVHyC1WSlKXEdr/preview' },
+                { id: 'placeholder-9', url: 'https://drive.google.com/file/d/19viS9LFusX5zEy9aQWb2VPpnx7WwO5f5/preview' },
+                { id: 'placeholder-10', url: 'https://drive.google.com/file/d/14SoE08itCyfZoR01u17wuy5ropLGx4r4/preview' },
+                { id: 'placeholder-11', url: 'https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview' },
+                { id: 'placeholder-12', url: 'https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview' },
+                { id: 'placeholder-13', url: 'https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview' },
+                { id: 'placeholder-14', url: 'https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview' },
+                { id: 'placeholder-15', url: 'https://drive.google.com/file/d/yo/preview' },
+                { id: 'placeholder-16', url: 'https://drive.google.com/file/d/yo/preview' },
+                { id: 'placeholder-17', url: 'https://drive.google.com/file/d/yo/preview' },
+                { id: 'placeholder-18', url: 'https://drive.google.com/file/d/yo/preview' },
+                { id: 'placeholder-19', url: 'https://drive.google.com/file/d/yo/preview' },
+                { id: 'placeholder-20', url: 'https://drive.google.com/file/d/yo/preview' },
+                { id: 'placeholder-21', url: 'https://drive.google.com/file/d/yo/preview' }
+            ];
+            
+            // PDF loading delay
+            pdfData.forEach((pdf, index) => {
+                setTimeout(() => {
+                    loadPDF(pdf.id, pdf.url);
+
+                    if (index === pdfData.length - 1) {
+                        button.classList.remove('loading');
+                        setTimeout(() => {
+                            container.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+                            container.style.opacity = '0';
+                            container.style.transform = 'translateY(-20px)';
+                            
+                            setTimeout(() => {
+                                container.style.display = 'none';
+                            }, 500);
+                        }, 500);
+                    }
+                }, index * 200); // 200ms delay between each load
+            });
         }
 
         function initializeStaggeredAnimation() {
@@ -1131,38 +1268,54 @@
         // Call the function when the DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
             const pdfs = [
-                { id: 'pdf-1', path: './Colored Cover Stories (with notes)/01.pdf' },
-                { id: 'pdf-2', path: './Colored Cover Stories (with notes)/02.pdf' },
-                { id: 'pdf-3', path: './Colored Cover Stories (with notes)/03.pdf' },
-                { id: 'pdf-4', path: './Colored Cover Stories (with notes)/04.pdf' },
-                { id: 'pdf-5', path: './Colored Cover Stories (with notes)/05.pdf' },
-                { id: 'pdf-6', path: './Colored Cover Stories (with notes)/06.pdf' },
-                { id: 'pdf-7', path: './Colored Cover Stories (with notes)/07.pdf' },
-                { id: 'pdf-8', path: './Colored Cover Stories (with notes)/08.pdf' },
-                { id: 'pdf-9', path: './Colored Cover Stories (with notes)/09_0.pdf' },
-                { id: 'pdf-10', path: './Colored Cover Stories (with notes)/09.pdf' },
-                { id: 'pdf-11', path: './Colored Cover Stories (with notes)/10_0.pdf' },
-                { id: 'pdf-12', path: './Colored Cover Stories (with notes)/10.pdf' },
-                { id: 'pdf-13', path: './Colored Cover Stories (with notes)/11-18.pdf' },
-                { id: 'pdf-14', path: './Colored Cover Stories (with notes)/19 (without last page).pdf' },
-                { id: 'pdf-15', path: './Colored Cover Stories (with notes)/20.pdf' },
-                { id: 'pdf-16', path: './Colored Cover Stories (with notes)/21.pdf' },
-                { id: 'pdf-17', path: './Colored Cover Stories (with notes)/22.pdf' },
-                { id: 'pdf-18', path: './Colored Cover Stories (with notes)/23.pdf' },
-                { id: 'pdf-19', path: './Colored Cover Stories (with notes)/24.pdf' },
-                { id: 'pdf-20', path: './Colored Cover Stories (with notes)/25.pdf' },
-                { id: 'pdf-21', path: './Colored Cover Stories (with notes)/26.pdf' }
+                { id: 'pdf-1', path: './Colored Cover Stories (with notes)/01.pdf', driveUrl: 'https://drive.google.com/file/d/1o1m-AOBmkYQnOCbGpgNqfuhypJw0LyFb/preview' },
+                { id: 'pdf-2', path: './Colored Cover Stories (with notes)/02.pdf', driveUrl: 'https://drive.google.com/file/d/1ZMN2h90f8dtrsGeeJaFlMQ2ilexzjGNZ/preview' },
+                { id: 'pdf-3', path: './Colored Cover Stories (with notes)/03.pdf', driveUrl: 'https://drive.google.com/file/d/1DGH137BYqBw8nk0Z7sSyo8o43ONz81Wf/preview' },
+                { id: 'pdf-4', path: './Colored Cover Stories (with notes)/04.pdf', driveUrl: 'https://drive.google.com/file/d/11NCJhE-fjhxVzkF76g8vK9cK9jElHMLU/preview' },
+                { id: 'pdf-5', path: './Colored Cover Stories (with notes)/05.pdf', driveUrl: 'https://drive.google.com/file/d/1jwst7A5x5-XdCp2uRMSV1Bzkcz3nyyZ5/preview' },
+                { id: 'pdf-6', path: './Colored Cover Stories (with notes)/06.pdf', driveUrl: 'https://drive.google.com/file/d/1RG7C-0-w66xkNGV-BBma9wKuDrTzuiKS/preview' },
+                { id: 'pdf-7', path: './Colored Cover Stories (with notes)/07.pdf', driveUrl: 'https://drive.google.com/file/d/1srYxhyx1WsHqzaXHAFr041A4qgVaqKxn/preview' },
+                { id: 'pdf-8', path: './Colored Cover Stories (with notes)/08.pdf', driveUrl: 'https://drive.google.com/file/d/1E_rMKM3q0fsiRZSzUuJVHyC1WSlKXEdr/preview' },
+                { id: 'pdf-9', path: './Colored Cover Stories (with notes)/09_0.pdf', driveUrl: 'https://drive.google.com/file/d/19viS9LFusX5zEy9aQWb2VPpnx7WwO5f5/preview' },
+                { id: 'pdf-10', path: './Colored Cover Stories (with notes)/09.pdf', driveUrl: 'https://drive.google.com/file/d/14SoE08itCyfZoR01u17wuy5ropLGx4r4/preview' },
+                { id: 'pdf-11', path: './Colored Cover Stories (with notes)/10_0.pdf', driveUrl: 'https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview' },
+                { id: 'pdf-12', path: './Colored Cover Stories (with notes)/10.pdf', driveUrl: 'https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview' },
+                { id: 'pdf-13', path: './Colored Cover Stories (with notes)/11-18.pdf', driveUrl: 'https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview' },
+                { id: 'pdf-14', path: './Colored Cover Stories (with notes)/19 (without last page).pdf', driveUrl: 'https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview' },
+                { id: 'pdf-15', path: './Colored Cover Stories/20.pdf', driveUrl: 'https://drive.google.com/file/d/yo/preview' },
+                { id: 'pdf-16', path: "./Colored Cover Stories/21.pdf", driveUrl: 'https://drive.google.com/file/d/yo/preview' },
+                { id: 'pdf-17', path: './Colored Cover Stories/22.pdf', driveUrl: 'https://drive.google.com/file/d/yo/preview' },
+                { id: 'pdf-18', path: './Colored Cover Stories/23.pdf', driveUrl: 'https://drive.google.com/file/d/yo/preview' },
+                { id: 'pdf-19', path: './Colored Cover Stories/24.pdf', driveUrl: 'https://drive.google.com/file/d/yo/preview' },
+                { id: 'pdf-20', path: './Colored Cover Stories/25.pdf', driveUrl: 'https://drive.google.com/file/d/yo/preview' },
+                { id: 'pdf-21', path: './Colored Cover Stories/26.pdf', driveUrl: 'https://drive.google.com/file/d/yo/preview' }
             ];
 
             pdfs.forEach(pdf => {
                 const container = document.getElementById(pdf.id);
                 if (container) {
-                    container.innerHTML = createPDFEmbed(pdf.path);
+                    const pdfNumber = pdf.id.replace('pdf-', '');
+                    container.innerHTML = createPDFEmbed(pdf.path, pdfNumber, pdf.driveUrl);
                 }
             });
             
             // animation function
             initializeStaggeredAnimation();
+
+            const isMobile = (function() {
+                const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+                const isSmallScreen = window.innerWidth <= 768;
+                const userAgent = navigator.userAgent.toLowerCase();
+                const isMobileBrowser = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini|mobile|tablet/i.test(userAgent);
+                
+                return isTouchDevice || isSmallScreen || isMobileBrowser;
+            })();
+
+            const mobileContainer = document.getElementById('mobileLoadAllContainer');
+
+            if (isMobile && mobileContainer) {
+                mobileContainer.style.display = 'block';
+            }
         });
 
         function toggleSpoiler(element) {
@@ -1248,3 +1401,4 @@
         <img class="lightbox-content" id="lightbox-img" onclick="event.stopPropagation()" src="" alt="">
     </div>
 </body>
+</html>
