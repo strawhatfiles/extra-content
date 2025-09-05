@@ -1344,11 +1344,13 @@
             { id: "pdf-21", path: "./Colored Cover Stories/26.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
         ];
 
-        pdfs.forEach((pdf) => {
+        pdfs.forEach((pdf, index) => {
             const container = document.getElementById(pdf.id);
             if (container) {
                 const pdfNumber = pdf.id.replace("pdf-", "");
-                container.innerHTML = createPDFEmbed(pdf.path, pdfNumber, pdf.driveUrl);
+                setTimeout(() => {
+                    container.innerHTML = createPDFEmbed(pdf.path, pdfNumber, pdf.driveUrl);
+                }, index * 450);
             }
         });
 
@@ -1386,12 +1388,12 @@
             if (nearBottom) {
                 scrollIcon.innerHTML = '<path d="m18 15-6-6-6 6"/>';
                 scrollBtn.onclick = () => {
-                    window.scrollTo({top: 0, behavior: "smooth"});
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                 };
             } else {
                 scrollIcon.innerHTML = '<path d="m6 9 6 6 6-6"/>';
                 scrollBtn.onclick = () => {
-                    window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
+                    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
                 };
             }
             scrollBtn.style.display = "block";
@@ -1399,7 +1401,6 @@
             scrollBtn.style.display = "none";
         }
     }
-
     window.addEventListener("scroll", updateScrollButton);
     updateScrollButton();
 
