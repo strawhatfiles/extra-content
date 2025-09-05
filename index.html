@@ -574,7 +574,7 @@
                         <img src="embeds/thumbnails/Bump of Chicken.jpg" alt="Hungry Days × One Piece × Bump of Chicken" />
                         <div class="play-overlay">
                             <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M8 5v14l11-7z" />
+                                <path d="M8 5v14l11-7z"/>
                             </svg>
                         </div>
                     </div>
@@ -944,7 +944,7 @@
 
             <div class="ops-eds-item four-three">
                 <div class="ops-eds-content">
-                    <h4>One Piece 4Kids Opening – Pirate Rap</h4>
+                    <h4>One Piece (4Kids Pirate Rap) – Opening</h4>
                     <p class="episodes">Episodes 1-143*</p>
                     <p>Opening theme used in every episode of the 4Kids Dub.</p>
                     <p></p>
@@ -1137,57 +1137,57 @@
         if (supportsPDF) {
             // Native PDF embed
             return `
-                        <div style="position: relative; width: 100%; height: 100%;">
-                            <object data="${pdfPath}#view=Fit" type="application/pdf"
-                                    style="width: 160%; height: 100%; margin-left: -30%; border: none;">
-                                <div class="pdf-placeholder" id="placeholder-${pdfId}">
-                                    <div class="load-button" onclick="loadPDF('placeholder-${pdfId}', '${driveUrl}')">
-                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M8 5v14l11-7z"/>
-                                        </svg>
-                                        <span>Load PDF</span>
-                                    </div>
+                    <div style="position: relative; width: 100%; height: 100%;">
+                        <object data="${pdfPath}#view=Fit" type="application/pdf"
+                                style="width: 160%; height: 100%; margin-left: -30%; border: none;">
+                            <div class="pdf-placeholder" id="placeholder-${pdfId}">
+                                <div class="load-button" onclick="loadPDF('placeholder-${pdfId}', '${driveUrl}')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
                                 </div>
-                            </object>
-                            <button onclick="window.open('${pdfPath}', '_blank')"
-                                    style="position: absolute;
-                                        top: 50%;
-                                        right: 8px;
-                                        transform: translateY(-50%);
-                                        background: rgba(0, 0, 0, 0.7);
-                                        border: 1px solid rgba(255, 255, 255, 0.3);
-                                        border-radius: 50%;
-                                        width: 32px;
-                                        height: 32px;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        color: white;
-                                        cursor: pointer;
-                                        transition: all 0.3s ease;
-                                        backdrop-filter: blur(5px);
-                                        z-index: 10;"
-                                    onmouseover="this.style.background='rgba(255, 107, 107, 0.9)'; this.style.transform='translateY(-50%) scale(1.1)'"
-                                    onmouseout="this.style.background='rgba(0, 0, 0, 0.7)'; this.style.transform='translateY(-50%) scale(1)'"
-                                    title="Open in new tab">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
-                                </svg>
-                            </button>
-                        </div>
-                    `;
+                            </div>
+                        </object>
+                        <button onclick="window.open('${pdfPath}', '_blank')"
+                                style="position: absolute;
+                                    top: 50%;
+                                    right: 8px;
+                                    transform: translateY(-50%);
+                                    background: rgba(0, 0, 0, 0.7);
+                                    border: 1px solid rgba(255, 255, 255, 0.3);
+                                    border-radius: 50%;
+                                    width: 32px;
+                                    height: 32px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: white;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    backdrop-filter: blur(5px);
+                                    z-index: 10;"
+                                onmouseover="this.style.background='rgba(255, 107, 107, 0.9)'; this.style.transform='translateY(-50%) scale(1.1)'"
+                                onmouseout="this.style.background='rgba(0, 0, 0, 0.7)'; this.style.transform='translateY(-50%) scale(1)'"
+                                title="Open in new tab">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                `;
         } else {
             // Mobile or no PDF support
             return `
-                        <div class="pdf-placeholder" id="placeholder-${pdfId}">
-                            <div class="load-button" onclick="loadPDF('placeholder-${pdfId}', '${driveUrl}')">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                                <span>Load PDF</span>
-                            </div>
+                    <div class="pdf-placeholder" id="placeholder-${pdfId}">
+                        <div class="load-button" onclick="loadPDF('placeholder-${pdfId}', '${driveUrl}')">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <span>Load PDF</span>
                         </div>
-                    `;
+                    </div>
+                `;
         }
     }
 
@@ -1229,27 +1229,27 @@
 
         // PDF URLs array for mobile
         const pdfData = [
-            {id: "placeholder-1", url: "https://drive.google.com/file/d/1o1m-AOBmkYQnOCbGpgNqfuhypJw0LyFb/preview"},
-            {id: "placeholder-2", url: "https://drive.google.com/file/d/1ZMN2h90f8dtrsGeeJaFlMQ2ilexzjGNZ/preview"},
-            {id: "placeholder-3", url: "https://drive.google.com/file/d/1DGH137BYqBw8nk0Z7sSyo8o43ONz81Wf/preview"},
-            {id: "placeholder-4", url: "https://drive.google.com/file/d/11NCJhE-fjhxVzkF76g8vK9cK9jElHMLU/preview"},
-            {id: "placeholder-5", url: "https://drive.google.com/file/d/1jwst7A5x5-XdCp2uRMSV1Bzkcz3nyyZ5/preview"},
-            {id: "placeholder-6", url: "https://drive.google.com/file/d/1RG7C-0-w66xkNGV-BBma9wKuDrTzuiKS/preview"},
-            {id: "placeholder-7", url: "https://drive.google.com/file/d/1srYxhyx1WsHqzaXHAFr041A4qgVaqKxn/preview"},
-            {id: "placeholder-8", url: "https://drive.google.com/file/d/1E_rMKM3q0fsiRZSzUuJVHyC1WSlKXEdr/preview"},
-            {id: "placeholder-9", url: "https://drive.google.com/file/d/19viS9LFusX5zEy9aQWb2VPpnx7WwO5f5/preview"},
-            {id: "placeholder-10", url: "https://drive.google.com/file/d/14SoE08itCyfZoR01u17wuy5ropLGx4r4/preview"},
-            {id: "placeholder-11", url: "https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview"},
-            {id: "placeholder-12", url: "https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview"},
-            {id: "placeholder-13", url: "https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview"},
-            {id: "placeholder-14", url: "https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview"},
-            {id: "placeholder-15", url: "https://drive.google.com/file/d/yo/preview"},
-            {id: "placeholder-16", url: "https://drive.google.com/file/d/yo/preview"},
-            {id: "placeholder-17", url: "https://drive.google.com/file/d/yo/preview"},
-            {id: "placeholder-18", url: "https://drive.google.com/file/d/yo/preview"},
-            {id: "placeholder-19", url: "https://drive.google.com/file/d/yo/preview"},
-            {id: "placeholder-20", url: "https://drive.google.com/file/d/yo/preview"},
-            {id: "placeholder-21", url: "https://drive.google.com/file/d/yo/preview"},
+            { id: "placeholder-1", url: "https://drive.google.com/file/d/1o1m-AOBmkYQnOCbGpgNqfuhypJw0LyFb/preview" },
+            { id: "placeholder-2", url: "https://drive.google.com/file/d/1ZMN2h90f8dtrsGeeJaFlMQ2ilexzjGNZ/preview" },
+            { id: "placeholder-3", url: "https://drive.google.com/file/d/1DGH137BYqBw8nk0Z7sSyo8o43ONz81Wf/preview" },
+            { id: "placeholder-4", url: "https://drive.google.com/file/d/11NCJhE-fjhxVzkF76g8vK9cK9jElHMLU/preview" },
+            { id: "placeholder-5", url: "https://drive.google.com/file/d/1jwst7A5x5-XdCp2uRMSV1Bzkcz3nyyZ5/preview" },
+            { id: "placeholder-6", url: "https://drive.google.com/file/d/1RG7C-0-w66xkNGV-BBma9wKuDrTzuiKS/preview" },
+            { id: "placeholder-7", url: "https://drive.google.com/file/d/1srYxhyx1WsHqzaXHAFr041A4qgVaqKxn/preview" },
+            { id: "placeholder-8", url: "https://drive.google.com/file/d/1E_rMKM3q0fsiRZSzUuJVHyC1WSlKXEdr/preview" },
+            { id: "placeholder-9", url: "https://drive.google.com/file/d/19viS9LFusX5zEy9aQWb2VPpnx7WwO5f5/preview" },
+            { id: "placeholder-10", url: "https://drive.google.com/file/d/14SoE08itCyfZoR01u17wuy5ropLGx4r4/preview" },
+            { id: "placeholder-11", url: "https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview" },
+            { id: "placeholder-12", url: "https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview" },
+            { id: "placeholder-13", url: "https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview" },
+            { id: "placeholder-14", url: "https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview" },
+            { id: "placeholder-15", url: "https://drive.google.com/file/d/yo/preview" },
+            { id: "placeholder-16", url: "https://drive.google.com/file/d/yo/preview" },
+            { id: "placeholder-17", url: "https://drive.google.com/file/d/yo/preview" },
+            { id: "placeholder-18", url: "https://drive.google.com/file/d/yo/preview" },
+            { id: "placeholder-19", url: "https://drive.google.com/file/d/yo/preview" },
+            { id: "placeholder-20", url: "https://drive.google.com/file/d/yo/preview" },
+            { id: "placeholder-21", url: "https://drive.google.com/file/d/yo/preview" },
         ];
 
         // PDF loading delay
@@ -1290,111 +1290,27 @@
     // Call the function when the DOM is loaded
     document.addEventListener("DOMContentLoaded", function () {
         const pdfs = [
-            {
-                id: "pdf-1",
-                path: "./Colored Cover Stories (with notes)/01.pdf",
-                driveUrl: "https://drive.google.com/file/d/1o1m-AOBmkYQnOCbGpgNqfuhypJw0LyFb/preview"
-            },
-            {
-                id: "pdf-2",
-                path: "./Colored Cover Stories (with notes)/02.pdf",
-                driveUrl: "https://drive.google.com/file/d/1ZMN2h90f8dtrsGeeJaFlMQ2ilexzjGNZ/preview"
-            },
-            {
-                id: "pdf-3",
-                path: "./Colored Cover Stories (with notes)/03.pdf",
-                driveUrl: "https://drive.google.com/file/d/1DGH137BYqBw8nk0Z7sSyo8o43ONz81Wf/preview"
-            },
-            {
-                id: "pdf-4",
-                path: "./Colored Cover Stories (with notes)/04.pdf",
-                driveUrl: "https://drive.google.com/file/d/11NCJhE-fjhxVzkF76g8vK9cK9jElHMLU/preview"
-            },
-            {
-                id: "pdf-5",
-                path: "./Colored Cover Stories (with notes)/05.pdf",
-                driveUrl: "https://drive.google.com/file/d/1jwst7A5x5-XdCp2uRMSV1Bzkcz3nyyZ5/preview"
-            },
-            {
-                id: "pdf-6",
-                path: "./Colored Cover Stories (with notes)/06.pdf",
-                driveUrl: "https://drive.google.com/file/d/1RG7C-0-w66xkNGV-BBma9wKuDrTzuiKS/preview"
-            },
-            {
-                id: "pdf-7",
-                path: "./Colored Cover Stories (with notes)/07.pdf",
-                driveUrl: "https://drive.google.com/file/d/1srYxhyx1WsHqzaXHAFr041A4qgVaqKxn/preview"
-            },
-            {
-                id: "pdf-8",
-                path: "./Colored Cover Stories (with notes)/08.pdf",
-                driveUrl: "https://drive.google.com/file/d/1E_rMKM3q0fsiRZSzUuJVHyC1WSlKXEdr/preview"
-            },
-            {
-                id: "pdf-9",
-                path: "./Colored Cover Stories (with notes)/09_0.pdf",
-                driveUrl: "https://drive.google.com/file/d/19viS9LFusX5zEy9aQWb2VPpnx7WwO5f5/preview"
-            },
-            {
-                id: "pdf-10",
-                path: "./Colored Cover Stories (with notes)/09.pdf",
-                driveUrl: "https://drive.google.com/file/d/14SoE08itCyfZoR01u17wuy5ropLGx4r4/preview"
-            },
-            {
-                id: "pdf-11",
-                path: "./Colored Cover Stories (with notes)/10_0.pdf",
-                driveUrl: "https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview"
-            },
-            {
-                id: "pdf-12",
-                path: "./Colored Cover Stories (with notes)/10.pdf",
-                driveUrl: "https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview"
-            },
-            {
-                id: "pdf-13",
-                path: "./Colored Cover Stories (with notes)/11-18.pdf",
-                driveUrl: "https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview"
-            },
-            {
-                id: "pdf-14",
-                path: "./Colored Cover Stories (with notes)/19 (without last page).pdf",
-                driveUrl: "https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview"
-            },
-            {
-                id: "pdf-15",
-                path: "./Colored Cover Stories/20.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
-            {
-                id: "pdf-16",
-                path: "./Colored Cover Stories/21.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
-            {
-                id: "pdf-17",
-                path: "./Colored Cover Stories/22.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
-            {
-                id: "pdf-18",
-                path: "./Colored Cover Stories/23.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
-            {
-                id: "pdf-19",
-                path: "./Colored Cover Stories/24.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
-            {
-                id: "pdf-20",
-                path: "./Colored Cover Stories/25.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
-            {
-                id: "pdf-21",
-                path: "./Colored Cover Stories/26.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
+            { id: "pdf-1", path: "./Colored Cover Stories (with notes)/01.pdf", driveUrl: "https://drive.google.com/file/d/1o1m-AOBmkYQnOCbGpgNqfuhypJw0LyFb/preview" },
+            { id: "pdf-2", path: "./Colored Cover Stories (with notes)/02.pdf", driveUrl: "https://drive.google.com/file/d/1ZMN2h90f8dtrsGeeJaFlMQ2ilexzjGNZ/preview" },
+            { id: "pdf-3", path: "./Colored Cover Stories (with notes)/03.pdf", driveUrl: "https://drive.google.com/file/d/1DGH137BYqBw8nk0Z7sSyo8o43ONz81Wf/preview" },
+            { id: "pdf-4", path: "./Colored Cover Stories (with notes)/04.pdf", driveUrl: "https://drive.google.com/file/d/11NCJhE-fjhxVzkF76g8vK9cK9jElHMLU/preview" },
+            { id: "pdf-5", path: "./Colored Cover Stories (with notes)/05.pdf", driveUrl: "https://drive.google.com/file/d/1jwst7A5x5-XdCp2uRMSV1Bzkcz3nyyZ5/preview" },
+            { id: "pdf-6", path: "./Colored Cover Stories (with notes)/06.pdf", driveUrl: "https://drive.google.com/file/d/1RG7C-0-w66xkNGV-BBma9wKuDrTzuiKS/preview" },
+            { id: "pdf-7", path: "./Colored Cover Stories (with notes)/07.pdf", driveUrl: "https://drive.google.com/file/d/1srYxhyx1WsHqzaXHAFr041A4qgVaqKxn/preview" },
+            { id: "pdf-8", path: "./Colored Cover Stories (with notes)/08.pdf", driveUrl: "https://drive.google.com/file/d/1E_rMKM3q0fsiRZSzUuJVHyC1WSlKXEdr/preview" },
+            { id: "pdf-9", path: "./Colored Cover Stories (with notes)/09_0.pdf", driveUrl: "https://drive.google.com/file/d/19viS9LFusX5zEy9aQWb2VPpnx7WwO5f5/preview" },
+            { id: "pdf-10", path: "./Colored Cover Stories (with notes)/09.pdf", driveUrl: "https://drive.google.com/file/d/14SoE08itCyfZoR01u17wuy5ropLGx4r4/preview" },
+            { id: "pdf-11", path: "./Colored Cover Stories (with notes)/10_0.pdf", driveUrl: "https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview" },
+            { id: "pdf-12", path: "./Colored Cover Stories (with notes)/10.pdf", driveUrl: "https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview" },
+            { id: "pdf-13", path: "./Colored Cover Stories (with notes)/11-18.pdf", driveUrl: "https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview" },
+            { id: "pdf-14", path: "./Colored Cover Stories (with notes)/19 (without last page).pdf", driveUrl: "https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview" },
+            { id: "pdf-15", path: "./Colored Cover Stories/20.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+            { id: "pdf-16", path: "./Colored Cover Stories/21.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+            { id: "pdf-17", path: "./Colored Cover Stories/22.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+            { id: "pdf-18", path: "./Colored Cover Stories/23.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+            { id: "pdf-19", path: "./Colored Cover Stories/24.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+            { id: "pdf-20", path: "./Colored Cover Stories/25.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+            { id: "pdf-21", path: "./Colored Cover Stories/26.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
         ];
 
         pdfs.forEach((pdf) => {
