@@ -1608,3 +1608,128 @@ h1 {
     border-color: rgba(78, 205, 196, 0.5);
     transform: translateY(-2px);
 }
+
+.progress-counter {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 63%;
+    background: linear-gradient(90deg, #4ecdc4, #26a085);
+    border-radius: 4px;
+    animation: fillProgress 2s ease-out forwards;
+    transform-origin: left;
+}
+
+@keyframes fillProgress {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.progress-markers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.marker {
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 28px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.marker.completed {
+    background: rgba(78, 205, 196, 0.2);
+    color: #4ecdc4;
+    border-color: rgba(78, 205, 196, 0.3);
+    box-shadow: 0 2px 8px rgba(78, 205, 196, 0.2);
+}
+
+.marker.incomplete {
+    background: rgba(255, 255, 255, 0.05);
+    color: #666;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.marker:hover {
+    transform: translateY(-2px) scale(1.05);
+}
+
+.marker.completed:hover {
+    background: rgba(78, 205, 196, 0.3);
+    box-shadow: 0 4px 12px rgba(78, 205, 196, 0.4);
+}
+
+.progress-label {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .progress-counter {
+        margin: 1.5rem 0;
+        padding: 1rem;
+    }
+
+    .progress-markers {
+        gap: 0.3rem;
+    }
+
+    .marker {
+        padding: 0.25rem 0.4rem;
+        font-size: 0.7rem;
+        min-width: 24px;
+    }
+
+    .progress-label {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .progress-markers {
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .marker {
+        padding: 0.2rem 0.3rem;
+        font-size: 0.65rem;
+        min-width: 20px;
+    }
+}
