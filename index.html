@@ -29,8 +29,8 @@
     <link rel="preconnect" href="https://www.netflix.com" />
 
     <!-- Stylesheet + Version-Based Cache Busting -->
-    <link rel="stylesheet" href="styles.css?v=0.9.2" />
-    <script>const SITE_VERSION = "0.9.2";</script>
+    <link rel="stylesheet" href="styles.css?v=0.9.3" />
+    <script>const SITE_VERSION = "0.9.3";</script>
 </head>
 <body>
 <div class="header">
@@ -71,6 +71,16 @@
         <div class="sunny-gallery" style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2rem;">
             <div class="sunny-item">
                 <img
+                        src="embeds/SBS/Thousand Sunny (from special for 11th movie)/06 - The bathroom.webp"
+                        alt="The bathroom"
+                        style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3); cursor: pointer;"
+                        onclick="openLightbox(this.src)"
+                />
+                <p style="text-align: center; color: #888; font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8;">The bathroom</p>
+            </div>
+
+            <div class="sunny-item">
+                <img
                         src="embeds/SBS/Thousand Sunny (from special for 11th movie)/01 - The boys' room.webp"
                         alt="The boys' room"
                         style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3); cursor: pointer;"
@@ -101,32 +111,12 @@
 
             <div class="sunny-item">
                 <img
-                        src="embeds/SBS/Thousand Sunny (from special for 11th movie)/04 - The sick bay.webp"
-                        alt="The sick bay"
-                        style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3); cursor: pointer;"
-                        onclick="openLightbox(this.src)"
-                />
-                <p style="text-align: center; color: #888; font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8;">The sick bay</p>
-            </div>
-
-            <div class="sunny-item">
-                <img
                         src="embeds/SBS/Thousand Sunny (from special for 11th movie)/05 - The aquarium bar.webp"
                         alt="The aquarium bar"
                         style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3); cursor: pointer;"
                         onclick="openLightbox(this.src)"
                 />
                 <p style="text-align: center; color: #888; font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8;">The aquarium bar</p>
-            </div>
-
-            <div class="sunny-item">
-                <img
-                        src="embeds/SBS/Thousand Sunny (from special for 11th movie)/06 - The bathroom.webp"
-                        alt="The bathroom"
-                        style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3); cursor: pointer;"
-                        onclick="openLightbox(this.src)"
-                />
-                <p style="text-align: center; color: #888; font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8;">The bathroom</p>
             </div>
 
             <div class="sunny-item">
@@ -157,6 +147,16 @@
                         onclick="openLightbox(this.src)"
                 />
                 <p style="text-align: center; color: #888; font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8;">Franky's workshop</p>
+            </div>
+
+            <div class="sunny-item">
+                <img
+                        src="embeds/SBS/Thousand Sunny (from special for 11th movie)/04 - The sick bay.webp"
+                        alt="The sick bay"
+                        style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3); cursor: pointer;"
+                        onclick="openLightbox(this.src)"
+                />
+                <p style="text-align: center; color: #888; font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8;">The sick bay</p>
             </div>
 
             <div class="sunny-item">
@@ -195,8 +195,8 @@
         <div class="warning-box yellow">
             <span class="warning-icon">📝</span>
             <div>
-                <strong>Urouge in the present story</strong> has (the for Birkans typical) downward-pointing wings – just like all of Enel's troops (Satori, Gedatsu, Shura, Ohm, and the rest of his goons) did –
-                <strong>however, according to this SBS, he seems to have been born(?) Skypiean</strong>.
+                <strong>Urouge in the present story has (the for Birkans typical) downward-pointing wings</strong> – just like all of Enel's troops (Satori, Gedatsu, Shura, Ohm, and the rest of his goons) did –
+                <strong>however,</strong> according to this SBS, <strong>he seems to have been born(?) Skypiean</strong>.
             </div>
         </div>
 
@@ -205,6 +205,37 @@
 
     <!-- Cover Stories Tab -->
     <div id="cover-stories" class="tab-content active">
+
+        <div class="progress-counter">
+            <div class="progress-bar-container">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-markers">
+                    <a href="#cover-story-1" class="marker completed" data-number="1">1</a>
+                    <a href="#cover-story-2" class="marker completed" data-number="2">2</a>
+                    <a href="#cover-story-3" class="marker completed" data-number="3">3</a>
+                    <a href="#cover-story-4" class="marker completed" data-number="4">4</a>
+                    <a href="#cover-story-5" class="marker completed" data-number="5">5</a>
+                    <a href="#cover-story-6" class="marker completed" data-number="6">6</a>
+                    <a href="#cover-story-7" class="marker completed" data-number="7">7</a>
+                    <a href="#cover-story-8" class="marker completed" data-number="8">8</a>
+                    <a href="#cover-story-9" class="marker completed" data-number="9">9</a>
+                    <a href="#cover-story-10" class="marker completed" data-number="10">10</a>
+                    <a href="#cover-story-11_18" class="marker completed" data-number="11-18">11-18</a>
+                    <a href="#cover-story-19" class="marker completed" data-number="19">19</a>
+                    <a href="#cover-story-20" class="marker incomplete" data-number="20">20</a>
+                    <a href="#cover-story-21" class="marker incomplete" data-number="21">21</a>
+                    <a href="#cover-story-22" class="marker incomplete" data-number="22">22</a>
+                    <a href="#cover-story-23" class="marker incomplete" data-number="23">23</a>
+                    <a href="#cover-story-24" class="marker incomplete" data-number="24">24</a>
+                    <a href="#cover-story-25" class="marker incomplete" data-number="25">25</a>
+                    <a href="#cover-story-26" class="marker incomplete" data-number="26">26</a>
+                </div>
+            </div>
+            <p class="progress-label">Cover Story Progress • 12 of 19 Complete</p>
+        </div>
+
         <div class="load-all-container" id="mobileLoadAllContainer" style="display: none;">
             <button class="load-all-btn" onclick="loadAllPDFs()" id="loadAllBtn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -215,7 +246,7 @@
         </div>
 
         <div class="cover-stories-grid">
-            <div class="cover-story" data-number="COVER #1">
+            <div class="cover-story" data-number="COVER #1" id="cover-story-1">
                 <div class="cover-story-content">
                     <h3>Buggy's Crew Adventure Chronicles ✅</h3>
                     <p class="chapters">ch35-75 (Syrup Village -> Arlong Park)</p>
@@ -224,7 +255,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #2">
+            <div class="cover-story" data-number="COVER #2" id="cover-story-2">
                 <div class="cover-story-content">
                     <h3>Diary of Koby-Meppo ✅</h3>
                     <p class="chapters">ch83-119 (Arlong Park -> Little Garden)</p>
@@ -233,7 +264,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #3">
+            <div class="cover-story" data-number="COVER #3" id="cover-story-3">
                 <div class="cover-story-content">
                     <h3>Jango's Dance Paradise</h3>
                     <p class="chapters">ch126-172 (Little Garden -> Alabasta)</p>
@@ -242,7 +273,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #4">
+            <div class="cover-story" data-number="COVER #4" id="cover-story-4">
                 <div class="cover-story-content">
                     <h3>Hatchan's Sea-Floor Stroll</h3>
                     <p class="chapters">ch182-228 (Alabasta -> Jaya)</p>
@@ -251,7 +282,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #5">
+            <div class="cover-story" data-number="COVER #5" id="cover-story-5">
                 <div class="cover-story-content">
                     <h3>Wapol's Omnivorous Hurrah ❎</h3>
                     <p class="chapters">ch236-262 (Jaya -> Skypiea)</p>
@@ -260,7 +291,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #6">
+            <div class="cover-story" data-number="COVER #6" id="cover-story-6">
                 <div class="cover-story-content">
                     <h3>Ace's Great Blackbeard Search</h3>
                     <p class="chapters">ch272-305 (Skypiea -> Foxy)</p>
@@ -269,7 +300,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #7">
+            <div class="cover-story" data-number="COVER #7" id="cover-story-7">
                 <div class="cover-story-content">
                     <h3>Gedatsu's Accidental Blue-Sea Life</h3>
                     <p class="chapters">ch314-348 (Foxy -> Water 7)</p>
@@ -278,7 +309,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #8">
+            <div class="cover-story" data-number="COVER #8" id="cover-story-8">
                 <div class="cover-story-content">
                     <h3>Miss Goldenweek's "Operation: Meet BW"</h3>
                     <p class="chapters">ch359-413 (Water 7 -> Enies Lobby)</p>
@@ -296,7 +327,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #9">
+            <div class="cover-story" data-number="COVER #9" id="cover-story-9">
                 <div class="cover-story-content">
                     <h3>Enel's Great Space Operations</h3>
                     <p class="chapters">ch428-474 (Enies Lobby -> Thriller Bark)</p>
@@ -314,7 +345,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #10">
+            <div class="cover-story" data-number="COVER #10" id="cover-story-10">
                 <div class="cover-story-content">
                     <h3>CP9's Independent Report</h3>
                     <p class="chapters">ch491-528 (Thriller Bark -> Impel Down)</p>
@@ -323,7 +354,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #11-18">
+            <div class="cover-story" data-number="COVER #11-18" id="cover-story-11_18">
                 <div class="cover-story-content">
                     <h3>Straw Hat's Separation Serial ✅</h3>
                     <p class="chapters">ch543-560 (Impel Down -> Marineford)</p>
@@ -332,7 +363,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #19">
+            <div class="cover-story" data-number="COVER #19" id="cover-story-19">
                 <div class="cover-story-content">
                     <h3>From the Decks of the World</h3>
                     <p class="chapters">ch613-668 (Fish-Man Island -> Punk Hazard)</p>
@@ -341,7 +372,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #20">
+            <div class="cover-story" data-number="COVER #20" id="cover-story-20">
                 <div class="cover-story-content">
                     <h3>Caribou's Kehihihihi in the New World ❎</h3>
                     <p class="chapters">ch674-731 (Punk Hazard -> Dressrosa)</p>
@@ -350,7 +381,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #21">
+            <div class="cover-story" data-number="COVER #21" id="cover-story-21">
                 <div class="cover-story-content">
                     <h3>Solo Journey of Jinbe, Knight of the Sea</h3>
                     <p class="chapters">ch751-785 (Dressrosa)</p>
@@ -359,7 +390,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #22">
+            <div class="cover-story" data-number="COVER #22" id="cover-story-22">
                 <div class="cover-story-content">
                     <h3>From the Decks of the World: The 500,000,000 Man Arc</h3>
                     <p class="chapters">ch805-838 (Zou -> Whole Cake Island)</p>
@@ -368,7 +399,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #23">
+            <div class="cover-story" data-number="COVER #23" id="cover-story-23">
                 <div class="cover-story-content">
                     <h3>The Stories of the Self-Proclaimed Straw Hat Grand Fleet ❎</h3>
                     <p class="chapters">ch864-919 (Whole Cake Island -> Reverie)</p>
@@ -377,7 +408,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #24">
+            <div class="cover-story" data-number="COVER #24" id="cover-story-24">
                 <div class="cover-story-content">
                     <h3>"Gang" Bege's Oh My Family</h3>
                     <p class="chapters">ch948-994 (Wano)</p>
@@ -386,7 +417,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #25">
+            <div class="cover-story" data-number="COVER #25" id="cover-story-25">
                 <div class="cover-story-content">
                     <h3>Germa 66's Ahh... An Emotionless Excursion ❎</h3>
                     <p class="chapters">ch1035-1078 (Wano -> Egghead)</p>
@@ -395,7 +426,7 @@
                 </div>
             </div>
 
-            <div class="cover-story" data-number="COVER #26">
+            <div class="cover-story" data-number="COVER #26" id="cover-story-26">
                 <div class="cover-story-content">
                     <h3>Oni Child Yamato's Golden Harvest Surrogate Pilgrimage (ongoing)</h3>
                     <p class="chapters">ch1109-____ (Egghead -> _______)</p>
@@ -405,7 +436,10 @@
             </div>
         </div>
 
-        <div class="legend-notice">✅ = adapted<span class="separator"></span>❎ = partly "adapted" (= as a flashback)</div>
+        <div class="legend-notice">
+            ✅ = adapted
+            <span>❎ = partly "adapted" (= as a flashback)</span>
+        </div>
     </div>
 
     <!-- Specials & Movies Tab -->
@@ -571,7 +605,7 @@
                         <img src="embeds/thumbnails/Bump of Chicken.jpg" alt="Hungry Days × One Piece × Bump of Chicken" />
                         <div class="play-overlay">
                             <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M8 5v14l11-7z" />
+                                <path d="M8 5v14l11-7z"/>
                             </svg>
                         </div>
                     </div>
@@ -941,7 +975,7 @@
 
             <div class="ops-eds-item four-three">
                 <div class="ops-eds-content">
-                    <h4>One Piece 4Kids Opening – Pirate Rap</h4>
+                    <h4>One Piece (4Kids Pirate Rap) – Opening</h4>
                     <p class="episodes">Episodes 1-143*</p>
                     <p>Opening theme used in every episode of the 4Kids Dub.</p>
                     <p></p>
@@ -1134,57 +1168,57 @@
         if (supportsPDF) {
             // Native PDF embed
             return `
-                        <div style="position: relative; width: 100%; height: 100%;">
-                            <object data="${pdfPath}#view=Fit" type="application/pdf"
-                                    style="width: 160%; height: 100%; margin-left: -30%; border: none;">
-                                <div class="pdf-placeholder" id="placeholder-${pdfId}">
-                                    <div class="load-button" onclick="loadPDF('placeholder-${pdfId}', '${driveUrl}')">
-                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M8 5v14l11-7z"/>
-                                        </svg>
-                                        <span>Load PDF</span>
-                                    </div>
+                    <div style="position: relative; width: 100%; height: 100%;">
+                        <object data="${pdfPath}#view=Fit" type="application/pdf"
+                                style="width: 160%; height: 100%; margin-left: -30%; border: none;">
+                            <div class="pdf-placeholder" id="placeholder-${pdfId}">
+                                <div class="load-button" onclick="loadPDF('placeholder-${pdfId}', '${driveUrl}')">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span>Load PDF</span>
                                 </div>
-                            </object>
-                            <button onclick="window.open('${pdfPath}', '_blank')"
-                                    style="position: absolute;
-                                        top: 50%;
-                                        right: 8px;
-                                        transform: translateY(-50%);
-                                        background: rgba(0, 0, 0, 0.7);
-                                        border: 1px solid rgba(255, 255, 255, 0.3);
-                                        border-radius: 50%;
-                                        width: 32px;
-                                        height: 32px;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        color: white;
-                                        cursor: pointer;
-                                        transition: all 0.3s ease;
-                                        backdrop-filter: blur(5px);
-                                        z-index: 10;"
-                                    onmouseover="this.style.background='rgba(255, 107, 107, 0.9)'; this.style.transform='translateY(-50%) scale(1.1)'"
-                                    onmouseout="this.style.background='rgba(0, 0, 0, 0.7)'; this.style.transform='translateY(-50%) scale(1)'"
-                                    title="Open in new tab">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
-                                </svg>
-                            </button>
-                        </div>
-                    `;
+                            </div>
+                        </object>
+                        <button onclick="window.open('${pdfPath}', '_blank')"
+                                style="position: absolute;
+                                    top: 50%;
+                                    right: 8px;
+                                    transform: translateY(-50%);
+                                    background: rgba(0, 0, 0, 0.7);
+                                    border: 1px solid rgba(255, 255, 255, 0.3);
+                                    border-radius: 50%;
+                                    width: 32px;
+                                    height: 32px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: white;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    backdrop-filter: blur(5px);
+                                    z-index: 10;"
+                                onmouseover="this.style.background='rgba(255, 107, 107, 0.9)'; this.style.transform='translateY(-50%) scale(1.1)'"
+                                onmouseout="this.style.background='rgba(0, 0, 0, 0.7)'; this.style.transform='translateY(-50%) scale(1)'"
+                                title="Open in new tab">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                `;
         } else {
             // Mobile or no PDF support
             return `
-                        <div class="pdf-placeholder" id="placeholder-${pdfId}">
-                            <div class="load-button" onclick="loadPDF('placeholder-${pdfId}', '${driveUrl}')">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                                <span>Load PDF</span>
-                            </div>
+                    <div class="pdf-placeholder" id="placeholder-${pdfId}">
+                        <div class="load-button" onclick="loadPDF('placeholder-${pdfId}', '${driveUrl}')">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <span>Load PDF</span>
                         </div>
-                    `;
+                    </div>
+                `;
         }
     }
 
@@ -1226,27 +1260,27 @@
 
         // PDF URLs array for mobile
         const pdfData = [
-            {id: "placeholder-1", url: "https://drive.google.com/file/d/1o1m-AOBmkYQnOCbGpgNqfuhypJw0LyFb/preview"},
-            {id: "placeholder-2", url: "https://drive.google.com/file/d/1ZMN2h90f8dtrsGeeJaFlMQ2ilexzjGNZ/preview"},
-            {id: "placeholder-3", url: "https://drive.google.com/file/d/1DGH137BYqBw8nk0Z7sSyo8o43ONz81Wf/preview"},
-            {id: "placeholder-4", url: "https://drive.google.com/file/d/11NCJhE-fjhxVzkF76g8vK9cK9jElHMLU/preview"},
-            {id: "placeholder-5", url: "https://drive.google.com/file/d/1jwst7A5x5-XdCp2uRMSV1Bzkcz3nyyZ5/preview"},
-            {id: "placeholder-6", url: "https://drive.google.com/file/d/1RG7C-0-w66xkNGV-BBma9wKuDrTzuiKS/preview"},
-            {id: "placeholder-7", url: "https://drive.google.com/file/d/1srYxhyx1WsHqzaXHAFr041A4qgVaqKxn/preview"},
-            {id: "placeholder-8", url: "https://drive.google.com/file/d/1E_rMKM3q0fsiRZSzUuJVHyC1WSlKXEdr/preview"},
-            {id: "placeholder-9", url: "https://drive.google.com/file/d/19viS9LFusX5zEy9aQWb2VPpnx7WwO5f5/preview"},
-            {id: "placeholder-10", url: "https://drive.google.com/file/d/14SoE08itCyfZoR01u17wuy5ropLGx4r4/preview"},
-            {id: "placeholder-11", url: "https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview"},
-            {id: "placeholder-12", url: "https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview"},
-            {id: "placeholder-13", url: "https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview"},
-            {id: "placeholder-14", url: "https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview"},
-            {id: "placeholder-15", url: "https://drive.google.com/file/d/yo/preview"},
-            {id: "placeholder-16", url: "https://drive.google.com/file/d/yo/preview"},
-            {id: "placeholder-17", url: "https://drive.google.com/file/d/yo/preview"},
-            {id: "placeholder-18", url: "https://drive.google.com/file/d/yo/preview"},
-            {id: "placeholder-19", url: "https://drive.google.com/file/d/yo/preview"},
-            {id: "placeholder-20", url: "https://drive.google.com/file/d/yo/preview"},
-            {id: "placeholder-21", url: "https://drive.google.com/file/d/yo/preview"},
+            { id: "placeholder-1", url: "https://drive.google.com/file/d/1o1m-AOBmkYQnOCbGpgNqfuhypJw0LyFb/preview" },
+            { id: "placeholder-2", url: "https://drive.google.com/file/d/1ZMN2h90f8dtrsGeeJaFlMQ2ilexzjGNZ/preview" },
+            { id: "placeholder-3", url: "https://drive.google.com/file/d/1DGH137BYqBw8nk0Z7sSyo8o43ONz81Wf/preview" },
+            { id: "placeholder-4", url: "https://drive.google.com/file/d/11NCJhE-fjhxVzkF76g8vK9cK9jElHMLU/preview" },
+            { id: "placeholder-5", url: "https://drive.google.com/file/d/1jwst7A5x5-XdCp2uRMSV1Bzkcz3nyyZ5/preview" },
+            { id: "placeholder-6", url: "https://drive.google.com/file/d/1RG7C-0-w66xkNGV-BBma9wKuDrTzuiKS/preview" },
+            { id: "placeholder-7", url: "https://drive.google.com/file/d/1srYxhyx1WsHqzaXHAFr041A4qgVaqKxn/preview" },
+            { id: "placeholder-8", url: "https://drive.google.com/file/d/1E_rMKM3q0fsiRZSzUuJVHyC1WSlKXEdr/preview" },
+            { id: "placeholder-9", url: "https://drive.google.com/file/d/19viS9LFusX5zEy9aQWb2VPpnx7WwO5f5/preview" },
+            { id: "placeholder-10", url: "https://drive.google.com/file/d/14SoE08itCyfZoR01u17wuy5ropLGx4r4/preview" },
+            { id: "placeholder-11", url: "https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview" },
+            { id: "placeholder-12", url: "https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview" },
+            { id: "placeholder-13", url: "https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview" },
+            { id: "placeholder-14", url: "https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview" },
+            { id: "placeholder-15", url: "https://drive.google.com/file/d/yo/preview" },
+            { id: "placeholder-16", url: "https://drive.google.com/file/d/yo/preview" },
+            { id: "placeholder-17", url: "https://drive.google.com/file/d/yo/preview" },
+            { id: "placeholder-18", url: "https://drive.google.com/file/d/yo/preview" },
+            { id: "placeholder-19", url: "https://drive.google.com/file/d/yo/preview" },
+            { id: "placeholder-20", url: "https://drive.google.com/file/d/yo/preview" },
+            { id: "placeholder-21", url: "https://drive.google.com/file/d/yo/preview" },
         ];
 
         // PDF loading delay
@@ -1287,118 +1321,36 @@
     // Call the function when the DOM is loaded
     document.addEventListener("DOMContentLoaded", function () {
         const pdfs = [
-            {
-                id: "pdf-1",
-                path: "./Colored Cover Stories (with notes)/01.pdf",
-                driveUrl: "https://drive.google.com/file/d/1o1m-AOBmkYQnOCbGpgNqfuhypJw0LyFb/preview"
-            },
-            {
-                id: "pdf-2",
-                path: "./Colored Cover Stories (with notes)/02.pdf",
-                driveUrl: "https://drive.google.com/file/d/1ZMN2h90f8dtrsGeeJaFlMQ2ilexzjGNZ/preview"
-            },
-            {
-                id: "pdf-3",
-                path: "./Colored Cover Stories (with notes)/03.pdf",
-                driveUrl: "https://drive.google.com/file/d/1DGH137BYqBw8nk0Z7sSyo8o43ONz81Wf/preview"
-            },
-            {
-                id: "pdf-4",
-                path: "./Colored Cover Stories (with notes)/04.pdf",
-                driveUrl: "https://drive.google.com/file/d/11NCJhE-fjhxVzkF76g8vK9cK9jElHMLU/preview"
-            },
-            {
-                id: "pdf-5",
-                path: "./Colored Cover Stories (with notes)/05.pdf",
-                driveUrl: "https://drive.google.com/file/d/1jwst7A5x5-XdCp2uRMSV1Bzkcz3nyyZ5/preview"
-            },
-            {
-                id: "pdf-6",
-                path: "./Colored Cover Stories (with notes)/06.pdf",
-                driveUrl: "https://drive.google.com/file/d/1RG7C-0-w66xkNGV-BBma9wKuDrTzuiKS/preview"
-            },
-            {
-                id: "pdf-7",
-                path: "./Colored Cover Stories (with notes)/07.pdf",
-                driveUrl: "https://drive.google.com/file/d/1srYxhyx1WsHqzaXHAFr041A4qgVaqKxn/preview"
-            },
-            {
-                id: "pdf-8",
-                path: "./Colored Cover Stories (with notes)/08.pdf",
-                driveUrl: "https://drive.google.com/file/d/1E_rMKM3q0fsiRZSzUuJVHyC1WSlKXEdr/preview"
-            },
-            {
-                id: "pdf-9",
-                path: "./Colored Cover Stories (with notes)/09_0.pdf",
-                driveUrl: "https://drive.google.com/file/d/19viS9LFusX5zEy9aQWb2VPpnx7WwO5f5/preview"
-            },
-            {
-                id: "pdf-10",
-                path: "./Colored Cover Stories (with notes)/09.pdf",
-                driveUrl: "https://drive.google.com/file/d/14SoE08itCyfZoR01u17wuy5ropLGx4r4/preview"
-            },
-            {
-                id: "pdf-11",
-                path: "./Colored Cover Stories (with notes)/10_0.pdf",
-                driveUrl: "https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview"
-            },
-            {
-                id: "pdf-12",
-                path: "./Colored Cover Stories (with notes)/10.pdf",
-                driveUrl: "https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview"
-            },
-            {
-                id: "pdf-13",
-                path: "./Colored Cover Stories (with notes)/11-18.pdf",
-                driveUrl: "https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview"
-            },
-            {
-                id: "pdf-14",
-                path: "./Colored Cover Stories (with notes)/19 (without last page).pdf",
-                driveUrl: "https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview"
-            },
-            {
-                id: "pdf-15",
-                path: "./Colored Cover Stories/20.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
-            {
-                id: "pdf-16",
-                path: "./Colored Cover Stories/21.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
-            {
-                id: "pdf-17",
-                path: "./Colored Cover Stories/22.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
-            {
-                id: "pdf-18",
-                path: "./Colored Cover Stories/23.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
-            {
-                id: "pdf-19",
-                path: "./Colored Cover Stories/24.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
-            {
-                id: "pdf-20",
-                path: "./Colored Cover Stories/25.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
-            {
-                id: "pdf-21",
-                path: "./Colored Cover Stories/26.pdf",
-                driveUrl: "https://drive.google.com/file/d/yo/preview"
-            },
+            { id: "pdf-1", path: "./Colored Cover Stories (with notes)/01.pdf", driveUrl: "https://drive.google.com/file/d/1o1m-AOBmkYQnOCbGpgNqfuhypJw0LyFb/preview" },
+            { id: "pdf-2", path: "./Colored Cover Stories (with notes)/02.pdf", driveUrl: "https://drive.google.com/file/d/1ZMN2h90f8dtrsGeeJaFlMQ2ilexzjGNZ/preview" },
+            { id: "pdf-3", path: "./Colored Cover Stories (with notes)/03.pdf", driveUrl: "https://drive.google.com/file/d/1DGH137BYqBw8nk0Z7sSyo8o43ONz81Wf/preview" },
+            { id: "pdf-4", path: "./Colored Cover Stories (with notes)/04.pdf", driveUrl: "https://drive.google.com/file/d/11NCJhE-fjhxVzkF76g8vK9cK9jElHMLU/preview" },
+            { id: "pdf-5", path: "./Colored Cover Stories (with notes)/05.pdf", driveUrl: "https://drive.google.com/file/d/1jwst7A5x5-XdCp2uRMSV1Bzkcz3nyyZ5/preview" },
+            { id: "pdf-6", path: "./Colored Cover Stories (with notes)/06.pdf", driveUrl: "https://drive.google.com/file/d/1RG7C-0-w66xkNGV-BBma9wKuDrTzuiKS/preview" },
+            { id: "pdf-7", path: "./Colored Cover Stories (with notes)/07.pdf", driveUrl: "https://drive.google.com/file/d/1srYxhyx1WsHqzaXHAFr041A4qgVaqKxn/preview" },
+            { id: "pdf-8", path: "./Colored Cover Stories (with notes)/08.pdf", driveUrl: "https://drive.google.com/file/d/1E_rMKM3q0fsiRZSzUuJVHyC1WSlKXEdr/preview" },
+            { id: "pdf-9", path: "./Colored Cover Stories (with notes)/09_0.pdf", driveUrl: "https://drive.google.com/file/d/19viS9LFusX5zEy9aQWb2VPpnx7WwO5f5/preview" },
+            { id: "pdf-10", path: "./Colored Cover Stories (with notes)/09.pdf", driveUrl: "https://drive.google.com/file/d/14SoE08itCyfZoR01u17wuy5ropLGx4r4/preview" },
+            { id: "pdf-11", path: "./Colored Cover Stories (with notes)/10_0.pdf", driveUrl: "https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview" },
+            { id: "pdf-12", path: "./Colored Cover Stories (with notes)/10.pdf", driveUrl: "https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview" },
+            { id: "pdf-13", path: "./Colored Cover Stories (with notes)/11-18.pdf", driveUrl: "https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview" },
+            { id: "pdf-14", path: "./Colored Cover Stories (with notes)/19 (without last page).pdf", driveUrl: "https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview" },
+            { id: "pdf-15", path: "./Colored Cover Stories/20.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+            { id: "pdf-16", path: "./Colored Cover Stories/21.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+            { id: "pdf-17", path: "./Colored Cover Stories/22.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+            { id: "pdf-18", path: "./Colored Cover Stories/23.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+            { id: "pdf-19", path: "./Colored Cover Stories/24.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+            { id: "pdf-20", path: "./Colored Cover Stories/25.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+            { id: "pdf-21", path: "./Colored Cover Stories/26.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
         ];
 
-        pdfs.forEach((pdf) => {
+        pdfs.forEach((pdf, index) => {
             const container = document.getElementById(pdf.id);
             if (container) {
                 const pdfNumber = pdf.id.replace("pdf-", "");
-                container.innerHTML = createPDFEmbed(pdf.path, pdfNumber, pdf.driveUrl);
+                setTimeout(() => {
+                    container.innerHTML = createPDFEmbed(pdf.path, pdfNumber, pdf.driveUrl);
+                }, index * 450);
             }
         });
 
@@ -1436,12 +1388,12 @@
             if (nearBottom) {
                 scrollIcon.innerHTML = '<path d="m18 15-6-6-6 6"/>';
                 scrollBtn.onclick = () => {
-                    window.scrollTo({top: 0, behavior: "smooth"});
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                 };
             } else {
                 scrollIcon.innerHTML = '<path d="m6 9 6 6 6-6"/>';
                 scrollBtn.onclick = () => {
-                    window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
+                    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
                 };
             }
             scrollBtn.style.display = "block";
@@ -1449,7 +1401,6 @@
             scrollBtn.style.display = "none";
         }
     }
-
     window.addEventListener("scroll", updateScrollButton);
     updateScrollButton();
 
