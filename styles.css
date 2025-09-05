@@ -1579,12 +1579,10 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 95%;
+    max-width: 90%;
     max-height: 90%;
-    width: 95%;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    object-fit: contain;
 }
 
 .lightbox-close {
