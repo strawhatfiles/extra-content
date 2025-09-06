@@ -1148,6 +1148,8 @@
     }
 
     function createPDFEmbed(pdfPath, pdfId, driveUrl) {
+        const isPlaceholder = driveUrl.includes('/yo/preview');
+
         const supportsPDF = (function () {
             const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
             const isSmallScreen = window.innerWidth <= 768;
@@ -1165,6 +1167,19 @@
             return !isTouchDevice && !isSmallScreen && !isMobileBrowser && hasPDFSupport;
         })();
 
+        if (isPlaceholder) {
+            return `
+                    <div class="pdf-placeholder" id="placeholder-${pdfId}" style="opacity: 0.5; cursor: not-allowed;">
+                        <div class="load-button" style="pointer-events: none;">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor" style="opacity: 0.5;">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                            </svg>
+                            <span style="opacity: 0.5;">Not Available Yet</span>
+                        </div>
+                    </div>
+            `;
+        }
+
         if (supportsPDF) {
             // Native PDF embed
             return `
@@ -1176,7 +1191,7 @@
                                     <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M8 5v14l11-7z"/>
                                     </svg>
-                                    <span>Load PDF</span>
+                                    <span>Error</span>
                                 </div>
                             </div>
                         </object>
@@ -1206,7 +1221,7 @@
                             </svg>
                         </button>
                     </div>
-                `;
+            `;
         } else {
             // Mobile or no PDF support
             return `
@@ -1218,7 +1233,7 @@
                             <span>Load PDF</span>
                         </div>
                     </div>
-                `;
+            `;
         }
     }
 
@@ -1230,24 +1245,8 @@
     }
 
     function loadAllPDFs() {
-        const supportsPDF = (function () {
-            const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
-            const isSmallScreen = window.innerWidth <= 768;
-
-            const userAgent = navigator.userAgent.toLowerCase();
-            const isMobileBrowser = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini|mobile|tablet/i.test(userAgent);
-
-            let hasPDFSupport;
-            try {
-                hasPDFSupport = navigator.pdfViewerEnabled || (navigator.plugins && Array.from(navigator.plugins).some((plugin) => plugin.name.toLowerCase().includes("pdf")));
-            } catch (e) {
-                hasPDFSupport = false;
-            }
-
-            return !isTouchDevice && !isSmallScreen && !isMobileBrowser && hasPDFSupport;
-        })();
-
-        if (supportsPDF) return; // early return
+        const unloadedPlaceholders = document.querySelectorAll('.pdf-placeholder .load-button[onclick*="loadPDF"]');
+        if (unloadedPlaceholders.length === 0) return;
 
         const button = document.getElementById("loadAllBtn");
         if (!button) return;
@@ -1273,14 +1272,7 @@
             { id: "placeholder-11", url: "https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview" },
             { id: "placeholder-12", url: "https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview" },
             { id: "placeholder-13", url: "https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview" },
-            { id: "placeholder-14", url: "https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview" },
-            { id: "placeholder-15", url: "https://drive.google.com/file/d/yo/preview" },
-            { id: "placeholder-16", url: "https://drive.google.com/file/d/yo/preview" },
-            { id: "placeholder-17", url: "https://drive.google.com/file/d/yo/preview" },
-            { id: "placeholder-18", url: "https://drive.google.com/file/d/yo/preview" },
-            { id: "placeholder-19", url: "https://drive.google.com/file/d/yo/preview" },
-            { id: "placeholder-20", url: "https://drive.google.com/file/d/yo/preview" },
-            { id: "placeholder-21", url: "https://drive.google.com/file/d/yo/preview" },
+            { id: "placeholder-14", url: "https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview" }
         ];
 
         // PDF loading delay
@@ -1300,7 +1292,7 @@
                         }, 500);
                     }, 500);
                 }
-            }, index * 200); // 200ms delay between each load
+            }, index * 200);
         });
     }
 
@@ -1316,6 +1308,19 @@
                 story.style.animationDelay = `${index * 0.1}s`;
             }, 100);
         });
+    }
+
+    function updateLoadAllButton() {
+        const placeholders = document.querySelectorAll('.pdf-placeholder .load-button[onclick]');
+        const drivePlaceholders = Array.from(placeholders).filter(el => {
+            const onclick = el.getAttribute("onclick");
+            return onclick && onclick.includes("drive.google.com") && el.offsetParent !== null;
+        });
+
+        const loadAllContainer = document.getElementById("mobileLoadAllContainer");
+        if (!loadAllContainer) return;
+
+        loadAllContainer.style.display = drivePlaceholders.length > 0 ? "block" : "none";
     }
 
     // Call the function when the DOM is loaded
@@ -1350,27 +1355,15 @@
                 const pdfNumber = pdf.id.replace("pdf-", "");
                 setTimeout(() => {
                     container.innerHTML = createPDFEmbed(pdf.path, pdfNumber, pdf.driveUrl);
-                }, index * 450);
+                }, index * 200);
             }
         });
 
         // animation function
         initializeStaggeredAnimation();
 
-        const isMobile = (function () {
-            const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
-            const isSmallScreen = window.innerWidth <= 768;
-            const userAgent = navigator.userAgent.toLowerCase();
-            const isMobileBrowser = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini|mobile|tablet/i.test(userAgent);
-
-            return isTouchDevice || isSmallScreen || isMobileBrowser;
-        })();
-
-        const mobileContainer = document.getElementById("mobileLoadAllContainer");
-
-        if (isMobile && mobileContainer) {
-            mobileContainer.style.display = "block";
-        }
+        // Run after PDFs have been scheduled for creation
+        setTimeout(updateLoadAllButton, pdfs.length * 220);
     });
 
     function toggleSpoiler(element) {
