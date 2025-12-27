@@ -206,7 +206,8 @@ h1 {
     display: none;
 }
 
-.tab-content.active {
+.tab-content.active,
+#tab-display {
     display: block;
 }
 
