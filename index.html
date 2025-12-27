@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Extra Content Guide</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Extra Content Guide</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="Luffy.ico">
+        <!-- Favicon -->
+        <link rel="icon" href="Luffy.ico">
 
-    <!-- General Meta Tags -->
-    <meta name="description" content="a comprehensive overview on all One Piece extra content" />
+        <!-- General Meta Tags -->
+        <meta name="description" content="a comprehensive overview on all One Piece extra content" />
 
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="One Piece Extra Content Guide" />
-    <meta property="og:description" content="a comprehensive overview on all One Piece extra content" />
-    <meta property="og:image" content="https://strawhatfiles.github.io/extra-content/icon.jpg" />
+        <!-- Open Graph / Social Media Meta Tags -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="One Piece Extra Content Guide" />
+        <meta property="og:description" content="a comprehensive overview on all One Piece extra content" />
+        <meta property="og:image" content="https://strawhatfiles.github.io/extra-content/icon.jpg" />
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="One Piece Extra Content Guide" />
-    <meta name="twitter:description" content="a comprehensive overview on all One Piece extra content" />
-    <meta name="twitter:image" content="https://strawhatfiles.github.io/extra-content/icon.jpg" />
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="One Piece Extra Content Guide" />
+        <meta name="twitter:description" content="a comprehensive overview on all One Piece extra content" />
+        <meta name="twitter:image" content="https://strawhatfiles.github.io/extra-content/icon.jpg" />
 
-    <!-- Preconnect to External Domains -->
-    <link rel="preconnect" href="https://drive.google.com" />
-    <link rel="preconnect" href="https://www.youtube-nocookie.com" />
-    <link rel="preconnect" href="https://www.netflix.com" />
+        <!-- Preconnect to External Domains -->
+        <link rel="preconnect" href="https://drive.google.com" />
+        <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+        <link rel="preconnect" href="https://www.netflix.com" />
 
-    <!-- Stylesheet + Version-Based Cache Busting -->
-    <link rel="stylesheet" href="styles.css?v=0.9.5" />
-    <script>const SITE_VERSION = "0.9.5";</script>
-</head>
-<body>
-<div class="header">
-    <h1>One Piece Extra Content Guide</h1>
-    <p class="subtitle">CONTAINS SPOILERS IF YOU ARE NOT CAUGHT UP WITH THE ANIME</p>
-</div>
+        <!-- Stylesheet + Version-Based Cache Busting -->
+        <link rel="stylesheet" href="styles.css?v=0.9.5" />
+        <script>const SITE_VERSION = "0.9.5";</script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>One Piece Extra Content Guide</h1>
+            <p class="subtitle">CONTAINS SPOILERS IF YOU ARE NOT CAUGHT UP WITH THE ANIME</p>
+        </div>
 
-<button id="scrollToggle" class="btn btn-secondary scroll-btn" aria-label="Scroll">
-    <svg id="scrollIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-        <path d="m18 15-6-6-6 6" />
-    </svg>
-</button>
+        <button id="scrollToggle" class="btn btn-secondary scroll-btn" aria-label="Scroll">
+            <svg id="scrollIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="m18 15-6-6-6 6" />
+            </svg>
+        </button>
 
-<div class="tab-container">
-    <button class="tab" onclick="showTab('homepage')">Homepage</button>
-    <button class="tab" onclick="showTab('sbs')">SBS</button>
-    <button class="tab active" onclick="showTab('cover-stories')">Cover Stories</button>
-    <button class="tab" onclick="showTab('specials-movies')">Specials & Movies</button>
-    <button class="tab" onclick="showTab('filler')">Filler</button>
-    <button class="tab" onclick="showTab('ops-eds')">OPs & EDs</button>
-</div>
+        <div class="tab-container">
+            <button class="tab" onclick="showTab('homepage')">Homepage</button>
+            <button class="tab" onclick="showTab('sbs')">SBS</button>
+            <button class="tab" onclick="showTab('cover-stories')">Cover Stories</button>
+            <button class="tab" onclick="showTab('specials-movies')">Specials & Movies</button>
+            <button class="tab" onclick="showTab('filler')">Filler</button>
+            <button class="tab" onclick="showTab('ops-eds')">OPs & EDs</button>
+        </div>
 
-<div class="content">
-    <!-- Homepage Tab -->
-    <!-- (Important) SBS Tab -->
-    <!-- Cover Stories Tab -->
-    <!-- Specials & Movies Tab -->
-    <!-- Filler Tab -->
-    <!-- OPs & EDs Tab -->
-</div>
+        <div class="content">
+            <div id="tab-display"></div>
+            <!-- Homepage Tab -->
+            <!-- (Important) SBS Tab -->
+            <!-- Cover Stories Tab -->
+            <!-- Specials & Movies Tab -->
+            <!-- Filler Tab -->
+            <!-- OPs & EDs Tab -->
+        </div>
 
-<script src="main.js"></script>
+        <script src="main.js"></script>
 
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <img class="lightbox-content" id="lightbox-img" src="" alt=""/>
-</div>
-</body>
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" src="" alt=""/>
+        </div>
+    </body>
 </html>

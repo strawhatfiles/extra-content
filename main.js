@@ -1,35 +1,181 @@
-function showTab(tabName) {
-    const tabContainer = document.querySelector(".tab-container");
-    tabContainer.style.transition = "none";
+/**
+ * Tab Configuration & Global State
+ */
+const tabContents = {
+    'homepage': './pages/1-homepage.html',
+    'sbs': './pages/2-sbs.html',
+    'cover-stories': './pages/3-cover-stories.html',
+    'specials-movies': './pages/4-specials-movies.html',
+    'filler': './pages/5-filler.html',
+    'ops-eds': './pages/6-ops-eds.html'
+};
+let isScrolled = false;
 
+/**
+ * Main function to handle tab switching via AJAX/Fetch
+ */
+async function showTab(tabName) {
+    const display = document.getElementById('tab-display');
+    const url = tabContents[tabName];
+
+    if (!url) return;
+
+    // Reset UI states immediately
     window.scrollTo({
         top: 0,
         behavior: "instant"
     });
-
+    const tabContainer = document.querySelector(".tab-container");
     tabContainer.classList.remove("scrolled");
 
-    const tabContents = document.querySelectorAll(".tab-content");
-    tabContents.forEach((tab) => {
-        tab.classList.remove("active");
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP ${response.status}: ${url}`);
+
+        // Injecting directly from the promise result
+        display.innerHTML = await response.text();
+
+        // Update the active state of the buttons
+        updateActiveTabUI(tabName);
+
+        // Reset & Trigger animations
+        display.style.animation = "none";
+        // Void reflow to ensure the animation restarts
+        display.offsetHeight;
+        display.style.animation = "fadeIn 0.5s ease-out";
+
+        // IMPORTANT: Run tab-specific initialization after the HTML is in the DOM
+        if (tabName === 'cover-stories') initializeCoverStories();
+
+    } catch (error) {
+        display.innerHTML = `<div style="padding: 20px; color: white;">Error: Page could not be loaded.</div>`;
+        console.error("Fetch error:", error);
+    }
+}
+
+/**
+ * Logic specifically for rendering PDFs in the Cover Stories tab
+ */
+function initializeCoverStories() {
+    const pdfs = [
+        { id: "pdf-1", path: "./Colored Cover Stories (with notes)/01.pdf", driveUrl: "https://drive.google.com/file/d/1o1m-AOBmkYQnOCbGpgNqfuhypJw0LyFb/preview" },
+        { id: "pdf-2", path: "./Colored Cover Stories (with notes)/02.pdf", driveUrl: "https://drive.google.com/file/d/1ZMN2h90f8dtrsGeeJaFlMQ2ilexzjGNZ/preview" },
+        { id: "pdf-3", path: "./Colored Cover Stories (with notes)/03.pdf", driveUrl: "https://drive.google.com/file/d/1DGH137BYqBw8nk0Z7sSyo8o43ONz81Wf/preview" },
+        { id: "pdf-4", path: "./Colored Cover Stories (with notes)/04.pdf", driveUrl: "https://drive.google.com/file/d/11NCJhE-fjhxVzkF76g8vK9cK9jElHMLU/preview" },
+        { id: "pdf-5", path: "./Colored Cover Stories (with notes)/05.pdf", driveUrl: "https://drive.google.com/file/d/1jwst7A5x5-XdCp2uRMSV1Bzkcz3nyyZ5/preview" },
+        { id: "pdf-6", path: "./Colored Cover Stories (with notes)/06.pdf", driveUrl: "https://drive.google.com/file/d/1RG7C-0-w66xkNGV-BBma9wKuDrTzuiKS/preview" },
+        { id: "pdf-7", path: "./Colored Cover Stories (with notes)/07.pdf", driveUrl: "https://drive.google.com/file/d/1srYxhyx1WsHqzaXHAFr041A4qgVaqKxn/preview" },
+        { id: "pdf-8", path: "./Colored Cover Stories (with notes)/08.pdf", driveUrl: "https://drive.google.com/file/d/1E_rMKM3q0fsiRZSzUuJVHyC1WSlKXEdr/preview" },
+        { id: "pdf-9", path: "./Colored Cover Stories (with notes)/09_0.pdf", driveUrl: "https://drive.google.com/file/d/19viS9LFusX5zEy9aQWb2VPpnx7WwO5f5/preview" },
+        { id: "pdf-10", path: "./Colored Cover Stories (with notes)/09.pdf", driveUrl: "https://drive.google.com/file/d/14SoE08itCyfZoR01u17wuy5ropLGx4r4/preview" },
+        { id: "pdf-11", path: "./Colored Cover Stories (with notes)/10_0.pdf", driveUrl: "https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview" },
+        { id: "pdf-12", path: "./Colored Cover Stories (with notes)/10.pdf", driveUrl: "https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview" },
+        { id: "pdf-13", path: "./Colored Cover Stories (with notes)/11-18.pdf", driveUrl: "https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview" },
+        { id: "pdf-14", path: "./Colored Cover Stories (with notes)/19 (without last page).pdf", driveUrl: "https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview" },
+        { id: "pdf-15", path: "./Colored Cover Stories/20.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+        { id: "pdf-16", path: "./Colored Cover Stories/21.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+        { id: "pdf-17", path: "./Colored Cover Stories/22.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+        { id: "pdf-18", path: "./Colored Cover Stories/23.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+        { id: "pdf-19", path: "./Colored Cover Stories/24.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+        { id: "pdf-20", path: "./Colored Cover Stories/25.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
+        { id: "pdf-21", path: "./Colored Cover Stories/26.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" }
+    ];
+
+    pdfs.forEach((pdf, index) => {
+        const container = document.getElementById(pdf.id);
+        if (container) {
+            const pdfNumber = pdf.id.replace("pdf-", "");
+            setTimeout(() => {
+                container.innerHTML = createPDFEmbed(pdf.path, pdfNumber, pdf.driveUrl);
+            }, index * 200);
+        }
     });
 
+    initializeStaggeredAnimation();
+    setTimeout(updateLoadAllButton, pdfs.length * 220); // Run after PDFs have been scheduled for creation
+}
+
+/**
+ * Global Helpers & Event Listeners
+ */
+function updateActiveTabUI(tabName) {
     const tabs = document.querySelectorAll(".tab");
     tabs.forEach((tab) => {
-        tab.classList.remove("active");
+        if (tab.getAttribute('onclick').includes(`'${tabName}'`)) {
+            tab.classList.add("active");
+        } else {
+            tab.classList.remove("active");
+        }
     });
-
-    document.getElementById(tabName).classList.add("active");
-    event.target.classList.add("active");
-
-    const activeContent = document.getElementById(tabName);
-    activeContent.style.animation = "none";
-
-    setTimeout(() => {
-        tabContainer.style.transition = "";
-        activeContent.style.animation = "fadeIn 0.5s ease-out";
-    }, 50);
 }
+
+/**
+ * Scroll Button Elements
+ */
+const scrollBtn = document.getElementById("scrollToggle");
+const scrollIcon = document.getElementById("scrollIcon");
+
+function updateScrollButton() {
+    if (!scrollBtn || !scrollIcon) return;
+
+    const scrolled = window.scrollY;
+    const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+
+    if (scrolled > 300) {
+        scrollBtn.style.display = "block";
+        if (nearBottom) {
+            scrollIcon.innerHTML = '<path d="m18 15-6-6-6 6"/>';
+            scrollBtn.onclick = () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            };
+        } else {
+            scrollIcon.innerHTML = '<path d="m6 9 6 6 6-6"/>';
+            scrollBtn.onclick = () => {
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: "smooth"
+                });
+            };
+        }
+    } else {
+        scrollBtn.style.display = "none";
+    }
+}
+
+function updateTabContainer() {
+    const tabContainer = document.querySelector(".tab-container");
+    if (!tabContainer) return;
+
+    const scrollY = window.scrollY;
+    const START_THRESHOLD = 100;
+    const END_THRESHOLD = 400;
+
+    if (scrollY <= START_THRESHOLD) {
+        tabContainer.classList.remove("scrolled");
+        isScrolled = false;
+    } else if (scrollY >= END_THRESHOLD) {
+        tabContainer.classList.add("scrolled");
+        isScrolled = true;
+    }
+}
+
+/**
+ * Global Listeners
+ */
+let scrollTimeout;
+window.addEventListener("scroll", function() {
+    updateScrollButton();
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(updateTabContainer, 10);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    showTab('cover-stories'); // TODO
+    updateScrollButton();
+});
 
 function createPDFEmbed(pdfPath, pdfId, driveUrl) {
     const isPlaceholder = driveUrl.includes('/yo/preview');
@@ -207,49 +353,6 @@ function updateLoadAllButton() {
     loadAllContainer.style.display = drivePlaceholders.length > 0 ? "block" : "none";
 }
 
-// Call the function when the DOM is loaded
-document.addEventListener("DOMContentLoaded", function() {
-    const pdfs = [
-        { id: "pdf-1", path: "./Colored Cover Stories (with notes)/01.pdf", driveUrl: "https://drive.google.com/file/d/1o1m-AOBmkYQnOCbGpgNqfuhypJw0LyFb/preview" },
-        { id: "pdf-2", path: "./Colored Cover Stories (with notes)/02.pdf", driveUrl: "https://drive.google.com/file/d/1ZMN2h90f8dtrsGeeJaFlMQ2ilexzjGNZ/preview" },
-        { id: "pdf-3", path: "./Colored Cover Stories (with notes)/03.pdf", driveUrl: "https://drive.google.com/file/d/1DGH137BYqBw8nk0Z7sSyo8o43ONz81Wf/preview" },
-        { id: "pdf-4", path: "./Colored Cover Stories (with notes)/04.pdf", driveUrl: "https://drive.google.com/file/d/11NCJhE-fjhxVzkF76g8vK9cK9jElHMLU/preview" },
-        { id: "pdf-5", path: "./Colored Cover Stories (with notes)/05.pdf", driveUrl: "https://drive.google.com/file/d/1jwst7A5x5-XdCp2uRMSV1Bzkcz3nyyZ5/preview" },
-        { id: "pdf-6", path: "./Colored Cover Stories (with notes)/06.pdf", driveUrl: "https://drive.google.com/file/d/1RG7C-0-w66xkNGV-BBma9wKuDrTzuiKS/preview" },
-        { id: "pdf-7", path: "./Colored Cover Stories (with notes)/07.pdf", driveUrl: "https://drive.google.com/file/d/1srYxhyx1WsHqzaXHAFr041A4qgVaqKxn/preview" },
-        { id: "pdf-8", path: "./Colored Cover Stories (with notes)/08.pdf", driveUrl: "https://drive.google.com/file/d/1E_rMKM3q0fsiRZSzUuJVHyC1WSlKXEdr/preview" },
-        { id: "pdf-9", path: "./Colored Cover Stories (with notes)/09_0.pdf", driveUrl: "https://drive.google.com/file/d/19viS9LFusX5zEy9aQWb2VPpnx7WwO5f5/preview" },
-        { id: "pdf-10", path: "./Colored Cover Stories (with notes)/09.pdf", driveUrl: "https://drive.google.com/file/d/14SoE08itCyfZoR01u17wuy5ropLGx4r4/preview" },
-        { id: "pdf-11", path: "./Colored Cover Stories (with notes)/10_0.pdf", driveUrl: "https://drive.google.com/file/d/1VicvvI0x5VAL8YXFdw8Hw2lQxrdKKQ9m/preview" },
-        { id: "pdf-12", path: "./Colored Cover Stories (with notes)/10.pdf", driveUrl: "https://drive.google.com/file/d/1Rji2KO-IFmOMCGX0WXpyeOt3awqvIsGR/preview" },
-        { id: "pdf-13", path: "./Colored Cover Stories (with notes)/11-18.pdf", driveUrl: "https://drive.google.com/file/d/18CFV8ayme9D-Y0Dzv39N1T2635MDXdE-/preview" },
-        { id: "pdf-14", path: "./Colored Cover Stories (with notes)/19 (without last page).pdf", driveUrl: "https://drive.google.com/file/d/1MnJwXPs_R6H_UXeOQtGWXPSOWeZcsOCk/preview" },
-        { id: "pdf-15", path: "./Colored Cover Stories/20.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
-        { id: "pdf-16", path: "./Colored Cover Stories/21.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
-        { id: "pdf-17", path: "./Colored Cover Stories/22.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
-        { id: "pdf-18", path: "./Colored Cover Stories/23.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
-        { id: "pdf-19", path: "./Colored Cover Stories/24.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
-        { id: "pdf-20", path: "./Colored Cover Stories/25.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" },
-        { id: "pdf-21", path: "./Colored Cover Stories/26.pdf", driveUrl: "https://drive.google.com/file/d/yo/preview" }
-    ];
-
-    pdfs.forEach((pdf, index) => {
-        const container = document.getElementById(pdf.id);
-        if (container) {
-            const pdfNumber = pdf.id.replace("pdf-", "");
-            setTimeout(() => {
-                container.innerHTML = createPDFEmbed(pdf.path, pdfNumber, pdf.driveUrl);
-            }, index * 200);
-        }
-    });
-
-    // animation function
-    initializeStaggeredAnimation();
-
-    // Run after PDFs have been scheduled for creation
-    setTimeout(updateLoadAllButton, pdfs.length * 220);
-});
-
 function toggleSpoiler(element) {
     element.classList.toggle("revealed");
 }
@@ -268,64 +371,6 @@ function toggleCollapsible(sectionId) {
         toggle.style.transform = 'rotate(180deg)';
     }
 }
-
-const scrollBtn = document.getElementById("scrollToggle");
-const scrollIcon = document.getElementById("scrollIcon");
-
-function updateScrollButton() {
-    const scrolled = window.scrollY;
-    const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
-
-    if (scrolled > 300) {
-        if (nearBottom) {
-            scrollIcon.innerHTML = '<path d="m18 15-6-6-6 6"/>';
-            scrollBtn.onclick = () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
-            };
-        } else {
-            scrollIcon.innerHTML = '<path d="m6 9 6 6 6-6"/>';
-            scrollBtn.onclick = () => {
-                window.scrollTo({
-                    top: document.body.scrollHeight,
-                    behavior: "smooth"
-                });
-            };
-        }
-        scrollBtn.style.display = "block";
-    } else {
-        scrollBtn.style.display = "none";
-    }
-}
-window.addEventListener("scroll", updateScrollButton);
-updateScrollButton();
-
-let isScrolled = false;
-
-function updateTabContainer() {
-    const tabContainer = document.querySelector(".tab-container");
-    const scrollY = window.scrollY;
-    const startThreshold = 100;
-    const endThreshold = 400;
-
-    if (scrollY <= startThreshold) {
-        tabContainer.classList.remove("scrolled");
-        isScrolled = false;
-    } else if (scrollY >= endThreshold) {
-        tabContainer.classList.add("scrolled");
-        isScrolled = true;
-    }
-}
-
-window.addEventListener("scroll", updateTabContainer);
-
-let scrollTimeout;
-window.addEventListener("scroll", function() {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(updateTabContainer, 10);
-});
 
 function openLightbox(imageSrc) {
     const lightbox = document.getElementById("lightbox");
