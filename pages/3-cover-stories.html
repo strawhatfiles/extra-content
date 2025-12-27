@@ -1,0 +1,234 @@
+<div class="progress-counter">
+    <div class="progress-bar-container">
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="progress-markers">
+            <a href="#cover-story-1" class="marker completed" data-number="1">1</a>
+            <a href="#cover-story-2" class="marker completed" data-number="2">2</a>
+            <a href="#cover-story-3" class="marker completed" data-number="3">3</a>
+            <a href="#cover-story-4" class="marker completed" data-number="4">4</a>
+            <a href="#cover-story-5" class="marker completed" data-number="5">5</a>
+            <a href="#cover-story-6" class="marker completed" data-number="6">6</a>
+            <a href="#cover-story-7" class="marker completed" data-number="7">7</a>
+            <a href="#cover-story-8" class="marker completed" data-number="8">8</a>
+            <a href="#cover-story-9" class="marker completed" data-number="9">9</a>
+            <a href="#cover-story-10" class="marker completed" data-number="10">10</a>
+            <a href="#cover-story-11_18" class="marker completed" data-number="11-18">11-18</a>
+            <a href="#cover-story-19" class="marker completed" data-number="19">19</a>
+            <a href="#cover-story-20" class="marker incomplete" data-number="20">20</a>
+            <a href="#cover-story-21" class="marker incomplete" data-number="21">21</a>
+            <a href="#cover-story-22" class="marker incomplete" data-number="22">22</a>
+            <a href="#cover-story-23" class="marker incomplete" data-number="23">23</a>
+            <a href="#cover-story-24" class="marker incomplete" data-number="24">24</a>
+            <a href="#cover-story-25" class="marker incomplete" data-number="25">25</a>
+            <a href="#cover-story-26" class="marker incomplete" data-number="26">26</a>
+        </div>
+    </div>
+    <p class="progress-label">Cover Story Progress • 12 of 19 Complete</p>
+</div>
+
+<div class="load-all-container" id="mobileLoadAllContainer" style="display: none;">
+    <button class="load-all-btn" onclick="loadAllPDFs()" id="loadAllBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z" />
+        </svg>
+        Load All PDFs
+    </button>
+</div>
+
+<div class="cover-stories-grid">
+    <div class="cover-story" data-number="COVER #1" id="cover-story-1">
+        <div class="cover-story-content">
+            <h3>Buggy's Crew Adventure Chronicles ✅</h3>
+            <p class="chapters">ch35-75 (Syrup Village -> Arlong Park)</p>
+            <div class="pdf-container" id="pdf-1"></div>
+            <div class="info-box">takes place between the events of <strong>Orange Town</strong> and <strong>Loguetown</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #2" id="cover-story-2">
+        <div class="cover-story-content">
+            <h3>Diary of Koby-Meppo ✅</h3>
+            <p class="chapters">ch83-119 (Arlong Park -> Little Garden)</p>
+            <div class="pdf-container" id="pdf-2"></div>
+            <div class="info-box">takes place between the events of <strong>Romance Dawn</strong> and <strong>Post-Enies Lobby</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #3" id="cover-story-3">
+        <div class="cover-story-content">
+            <h3>Jango's Dance Paradise</h3>
+            <p class="chapters">ch126-172 (Little Garden -> Alabasta)</p>
+            <div class="pdf-container" id="pdf-3"></div>
+            <div class="info-box">takes place between the events of <strong>Baratie</strong> and <strong>Alabasta</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #4" id="cover-story-4">
+        <div class="cover-story-content">
+            <h3>Hatchan's Sea-Floor Stroll</h3>
+            <p class="chapters">ch182-228 (Alabasta -> Jaya)</p>
+            <div class="pdf-container" id="pdf-4"></div>
+            <div class="info-box">takes place between the events of <strong>Arlong Park</strong> and <strong>Sabaody</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #5" id="cover-story-5">
+        <div class="cover-story-content">
+            <h3>Wapol's Omnivorous Hurrah ❎</h3>
+            <p class="chapters">ch236-262 (Jaya -> Skypiea)</p>
+            <div class="pdf-container" id="pdf-5"></div>
+            <div class="info-box">takes place between the events of <strong>Drum Island</strong> and <strong>3D2Y/timeskip</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #6" id="cover-story-6">
+        <div class="cover-story-content">
+            <h3>Ace's Great Blackbeard Search</h3>
+            <p class="chapters">ch272-305 (Skypiea -> Foxy)</p>
+            <div class="pdf-container" id="pdf-6"></div>
+            <div class="info-box">takes place between the events of <strong>Jaya</strong> and <strong>Post-Enies Lobby</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #7" id="cover-story-7">
+        <div class="cover-story-content">
+            <h3>Gedatsu's Accidental Blue-Sea Life</h3>
+            <p class="chapters">ch314-348 (Foxy -> Water 7)</p>
+            <div class="pdf-container" id="pdf-7"></div>
+            <div class="info-box">takes place between the events of <strong>Skypiea</strong> and <strong>3D2Y/timeskip</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #8" id="cover-story-8">
+        <div class="cover-story-content">
+            <h3>Miss Goldenweek's "Operation: Meet BW"</h3>
+            <p class="chapters">ch359-413 (Water 7 -> Enies Lobby)</p>
+            <div class="pdf-container" id="pdf-8"></div>
+            <div class="info-box">takes place between the events of <strong>Alabasta</strong> and <strong>Impel Down</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story">
+        <div class="cover-story-content">
+            <h3>Where Are They Now? (prelude to #9)</h3>
+            <p class="chapters">ch424-427 (Enies Lobby)</p>
+            <div class="pdf-container" id="pdf-9"></div>
+            <div class="info-box">takes place between the events of <strong>Skypiea</strong> and <strong>3D2Y/timeskip</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #9" id="cover-story-9">
+        <div class="cover-story-content">
+            <h3>Enel's Great Space Operations</h3>
+            <p class="chapters">ch428-474 (Enies Lobby -> Thriller Bark)</p>
+            <div class="pdf-container" id="pdf-10"></div>
+            <div class="info-box">takes place after the events of <strong>Skypiea</strong>...</div>
+        </div>
+    </div>
+
+    <div class="cover-story">
+        <div class="cover-story-content">
+            <h3>Where Are They Now? (prelude to #10)</h3>
+            <p class="chapters">ch486-490 (Thriller Bark)</p>
+            <div class="pdf-container" id="pdf-11"></div>
+            <div class="info-box">takes place between the events of <strong>Enies Lobby</strong> and <strong>3D2Y/timeskip</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #10" id="cover-story-10">
+        <div class="cover-story-content">
+            <h3>CP9's Independent Report</h3>
+            <p class="chapters">ch491-528 (Thriller Bark -> Impel Down)</p>
+            <div class="pdf-container" id="pdf-12"></div>
+            <div class="info-box">takes place between the events of <strong>Enies Lobby</strong> and <strong>Dressrosa</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #11-18" id="cover-story-11_18">
+        <div class="cover-story-content">
+            <h3>Straw Hat's Separation Serial ✅</h3>
+            <p class="chapters">ch543-560 (Impel Down -> Marineford)</p>
+            <div class="pdf-container" id="pdf-13"></div>
+            <div class="info-box">takes place between the events of <strong>Sabaody</strong> and <strong>Post-War</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #19" id="cover-story-19">
+        <div class="cover-story-content">
+            <h3>From the Decks of the World</h3>
+            <p class="chapters">ch613-668 (Fish-Man Island -> Punk Hazard)</p>
+            <div class="pdf-container" id="pdf-14"></div>
+            <div class="info-box">takes place between the events of <strong>Return to Sabaody</strong> and <strong>Dressrosa</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #20" id="cover-story-20">
+        <div class="cover-story-content">
+            <h3>Caribou's Kehihihihi in the New World ❎</h3>
+            <p class="chapters">ch674-731 (Punk Hazard -> Dressrosa)</p>
+            <div class="pdf-container" id="pdf-15"></div>
+            <div class="info-box">takes place between the events of <strong>Fish-Man Island</strong> and <strong>Wano</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #21" id="cover-story-21">
+        <div class="cover-story-content">
+            <h3>Solo Journey of Jinbe, Knight of the Sea</h3>
+            <p class="chapters">ch751-785 (Dressrosa)</p>
+            <div class="pdf-container" id="pdf-16"></div>
+            <div class="info-box">takes place between the events of <strong>Fish-Man Island</strong> and <strong>Whole Cake Island</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #22" id="cover-story-22">
+        <div class="cover-story-content">
+            <h3>From the Decks of the World: The 500,000,000 Man Arc</h3>
+            <p class="chapters">ch805-838 (Zou -> Whole Cake Island)</p>
+            <div class="pdf-container" id="pdf-17"></div>
+            <div class="info-box">takes place between the events of <strong>Dressrosa</strong> and <strong>Whole Cake Island</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #23" id="cover-story-23">
+        <div class="cover-story-content">
+            <h3>The Stories of the Self-Proclaimed Straw Hat Grand Fleet ❎</h3>
+            <p class="chapters">ch864-919 (Whole Cake Island -> Reverie)</p>
+            <div class="pdf-container" id="pdf-18"></div>
+            <div class="info-box">takes place between the events of <strong>Dressrosa</strong> and <strong>Reverie</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #24" id="cover-story-24">
+        <div class="cover-story-content">
+            <h3>"Gang" Bege's Oh My Family</h3>
+            <p class="chapters">ch948-994 (Wano)</p>
+            <div class="pdf-container" id="pdf-19"></div>
+            <div class="info-box">takes place between the events of <strong>Whole Cake Island</strong> and <strong>Egghead</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #25" id="cover-story-25">
+        <div class="cover-story-content">
+            <h3>Germa 66's Ahh... An Emotionless Excursion ❎</h3>
+            <p class="chapters">ch1035-1078 (Wano -> Egghead)</p>
+            <div class="pdf-container" id="pdf-20"></div>
+            <div class="info-box">takes place during the <strong>Reverie/Wano</strong></div>
+        </div>
+    </div>
+
+    <div class="cover-story" data-number="COVER #26" id="cover-story-26">
+        <div class="cover-story-content">
+            <h3>Oni Child Yamato's Golden Harvest Surrogate Pilgrimage (ongoing)</h3>
+            <p class="chapters">ch1109-____ (Egghead -> _______)</p>
+            <div class="pdf-container" id="pdf-21"></div>
+            <div class="info-box">takes place after the events of <strong>Wano</strong>...</div>
+        </div>
+    </div>
+</div>
+
+<div class="legend-notice">
+    ✅ = adapted
+    <span>❎ = partly "adapted" (= as a flashback)</span>
+</div>
