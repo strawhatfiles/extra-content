@@ -187,15 +187,6 @@ h1 {
     }
 }
 
-.tab-content {
-    display: none;
-}
-
-.tab-content.active,
-#tab-display {
-    display: block;
-}
-
 .cover-story {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
